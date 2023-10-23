@@ -97,32 +97,7 @@ a:hover {
   font-weight: 700;
 }
 
-/*-------------------------------------------------
-   About Us setup
-   -----------------------------------------*/
 
-.brand-title {
-  font-size: 65px;
-  font-weight: 750;
-  font-family: var(--font-base);
-}
-
-.brand-p {
-  font-size: 25px;
-  font-weight: 400;
-  font-family: var(--font-base);
-}
-
-.brand-title-light {
-  font-size: 55px;
-  font-weight: 650;
-  font-family: var(--font-base);
-  color: var(--c-background);
-}
-.brand-p-2 {
-  font-size: 20px;
-  font-family: var(--font-base);
-}
 /*-------------------------------------------------
   iconbox setup
    -----------------------------------------*/
@@ -136,4 +111,7 @@ a:hover {
   font-size: 35px;
   text-align: center;
   flex: none;
+}
+.card img {
+  height: 280px;
 }
