@@ -115,3 +115,7 @@ a:hover {
 .card img {
   height: 280px;
 }
+#btn_login{
+  padding-left: 20px;
+  padding-right: 20px;
+}
