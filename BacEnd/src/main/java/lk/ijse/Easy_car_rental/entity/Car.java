@@ -22,18 +22,19 @@ public class Car {
     private String transmissionType;
     private String fuelType;
     private String color;
-
     private double completeKm;
     private String status;
 
+    private String frontViewImg;
+    private String backViewImg;
+    private String sideViewImg;
+    private String internalViewImg;
 
+    private double dailyRate;
+    private double freeKmForDay;
+    private double monthlyRate;
+    private double freeKmForMonth;
+    private double pricePerExtraKm;
 
-    // Define a one-to-one relationship with the Price entity
-    @OneToOne(mappedBy = "car", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Price price;
-
-    // Define a one-to-one relationship with the Price img
-    @OneToOne(mappedBy = "car", cascade = CascadeType.ALL, orphanRemoval = true)
-    private CarImg images;
 
 }

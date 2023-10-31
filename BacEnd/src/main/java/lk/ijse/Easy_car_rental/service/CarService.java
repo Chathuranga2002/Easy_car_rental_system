@@ -4,4 +4,5 @@ import lk.ijse.Easy_car_rental.entity.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CarService  {
+    void saveCar(Car dto);
 }
