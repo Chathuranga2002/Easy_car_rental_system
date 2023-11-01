@@ -13,8 +13,19 @@
 <div class="container">
     <div class="forms-container">
         <div class="signin-signup">
+
             <form action="#" class="sign-in-form">
+
                 <h2 class="title">Sign in</h2>
+                <!--          combo box-->
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <select class="cusCombo" id="userType" name="userType">
+                        <option value="admin">Customer</option>
+                        <option value="customer">Admin</option>
+                        <option value="driver">Driver</option>
+                    </select>
+                </div>
                 <div class="input-field">
                     <i class="fas fa-user"></i>
                     <input placeholder="Username" type="text"/>
@@ -25,13 +36,7 @@
                 </div>
                 <input class="btn solid" type="submit" value="Login"/>
 <!--                =======  end login-->
-                <p class="social-text">cancel</p>
-                <div class="social-media">
-                    <a class="social-icon" href="../index.html">
-                        <i class="fa fa-undo" aria-hidden="true"></i>
-                    </a>
 
-                </div>
             </form>
 
 <!--             sign up Page-->
@@ -39,9 +44,10 @@
             <form action="#" class="sign-up-form">
                 <h2 class="title">Sign up</h2>
                 <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input placeholder="Nic" type="text"/>
+                    <i class="fas fa-lock"></i>
+                    <input placeholder="cus Id" type="text" readonly/>
                 </div>
+
                 <div class="input-field">
                     <i class="fas fa-envelope"></i>
                     <input placeholder="Name" type="name"/>
@@ -52,11 +58,21 @@
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input placeholder="Contact" type="contact"/>
+                    <input placeholder="Email" type="email"/>
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input placeholder="Contact" type="text"/>
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input placeholder="Nic" type="text"/>
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input placeholder="Email" type="email"/>
+                    <input placeholder="User name" type="text"/>
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>

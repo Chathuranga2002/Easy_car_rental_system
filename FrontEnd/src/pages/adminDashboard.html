@@ -66,13 +66,19 @@
                     <span class="title">Rental Request</span>
                 </a>
             </li>
-
+            <br><br><br><br>
+            <li>
+                <a href="../index.html" id="logout">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="title">Log out</span>
+                </a>
+            </li>
 
         </ul>
     </div>  <!--Navigation seen over-->
 
 
-    <div class="main">  <!--Meka thamaa sudu paata kotuwa-->
+    <div class="main">
 
         <div class="topbar">  <!--Top bar seen open-->
             <div class="toggle">
@@ -106,16 +112,7 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div>
-                        <div class="numbers">00</div>
-                        <div class="cardName">TODAY BOOKINGS</div>
-                    </div>
 
-                    <div class="iconBx">
-                        <ion-icon name="bookmarks-outline"></ion-icon>
-                    </div>
-                </div>
 
                 <div class="card">
                     <div>
@@ -228,8 +225,26 @@
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
-                        <label class="form-label mb-0" for="imgFrontView">Car Image</label>
-                        <input class="form-control" id="imgFrontView" name="imgFrontView" type="file">
+                        <label class="form-label mb-0" for="frontViewImg">Front Image</label>
+                        <input class="form-control" id="frontViewImg" name="imgFrontView" type="file">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label class="form-label mb-0" for="backViewImg">back Image</label>
+                        <input class="form-control" id="backViewImg" name="imgFrontView" type="file">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label class="form-label mb-0" for="sideViewImg">side Image</label>
+                        <input class="form-control" id="sideViewImg" name="imgFrontView" type="file">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label class="form-label mb-0" for="internalViewImg">internal Image</label>
+                        <input class="form-control" id="internalViewImg" name="imgFrontView" type="file">
                     </div>
                 </div>
 
@@ -283,19 +298,19 @@
                 <table class="table table-hover table-bordered table-striped" id="carTbl">
                     <thead class="bg-info">
                     <tr>
-                        <th>Reg No</th>
+                        <th>RegNo</th>
                         <th>Brand</th>
                         <th>Type</th>
-                        <th>No Of Passengers</th>
+                        <th>Passengers</th>
                         <th>Transmission</th>
                         <th>Fuel</th>
                         <th>Color</th>
-                        <th>Car Image</th>
-                        <th>Daily Rate</th>
-                        <th>Free Km For Day</th>
+                        <th>status</th>
+                        <th>DailyRate</th>
+                        <th>FreeKmForDay</th>
                         <th>Monthly Rate</th>
-                        <th>Free Km For Month</th>
-                        <th>Price For Extra Km</th>
+                        <th>FreeKmForMonth</th>
+                        <th>PriceForExtraKm</th>
                     </tr>
                     </thead>
                     <tbody id="carTable"></tbody>
@@ -341,17 +356,12 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <label class="form-label mb-0">NIC Front View</label>
-                    <div class="mb-3" id="divNICFrontView" style="height: 13vh; border: #00e5ff 2px solid">
+                    <label class="form-label mb-0">NIC Image</label>
+                    <div class="mb-3" id="divNICFrontView" style="height: 13vh; border: #8800ff 2px solid">
 
                     </div>
                 </div>
-                <div class="col-2">
-                    <label class="form-label mb-0">NIC Back View</label>
-                    <div class="mb-3" id="divNICBackView" style="height: 13vh; border: #00e5ff 2px solid">
 
-                    </div>
-                </div>
 
             </div>
 
@@ -370,15 +380,15 @@
             </div>-->
             <!--                <div class="bg-light row overflow-scroll" style="height: 20vh">-->
             <div class="customerTable bg-light row overflow-scroll">
-                <table class="table table-hover table-bordered table-striped" id="pendingCustomerTbl">
+                <table class="table table-hover table-bordered table-striped" id="CustomerTbl">
                     <thead class="bg-info">
                     <tr>
                         <th>Customer Nic Id</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Tell</th>
-                        <th>NIC Front View</th>
-                        <th>NIC Back View</th>
+                        <th>NIC </th>
+                        <th>Status</th>
                     </tr>
                     </thead>
                     <tbody id="tblPendingCustomers"></tbody>

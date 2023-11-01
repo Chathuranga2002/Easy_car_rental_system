@@ -434,3 +434,8 @@ form.sign-in-form {
 .custom3::file-selector-button:hover {
     background-color: #0056b3;
 }
+.cusCombo{
+    width: 270px;
+    border: none;
+    background-color: #F0F0F0;
+}
