@@ -8,33 +8,37 @@
 
     <title>Sign in & Sign up Form</title>
 
+
 </head>
 <body>
 <div class="container">
     <div class="forms-container">
         <div class="signin-signup">
 
-            <form action="#" class="sign-in-form">
-
+            <form  class="sign-in-form" id="loginForm">
                 <h2 class="title">Sign in</h2>
-                <!--          combo box-->
+
+                <!-- combo box -->
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <select class="cusCombo" id="userType" name="userType">
-                        <option value="admin">Customer</option>
-                        <option value="customer">Admin</option>
+                    <select class="cusCombo" id="userType1" name="userType">
+                        <option value="customer">Customer</option>
+                        <option value="admin">Admin</option>
                         <option value="driver">Driver</option>
                     </select>
                 </div>
+
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input placeholder="Username" type="text"/>
+                    <input placeholder="Username" type="text" />
                 </div>
+
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input placeholder="Password" type="password"/>
+                    <input placeholder="Password" type="password" />
                 </div>
-                <input class="btn solid" type="submit" value="Login"/>
+
+                <input class="btn solid" type="button" value="Login" id="loginButton" />
 <!--                =======  end login-->
 
             </form>
@@ -85,6 +89,11 @@
                 </div>
 
                 <input class="btn" type="submit" value="Sign up"/>
+                <ul style="display: none;">
+                    <li><a href="../pages/DriverDashboard.html" id="driverDash">Page 1</a></li>
+                    <li><a href="../pages/adminDashboard.html" id="adminDash">Page 2</a></li>
+                    <li><a href="../pages/CustomerDashboard.html" id="CustomerDash">Page 3</a></li>
+                </ul>
             </form>
         </div>
     </div>
@@ -117,7 +126,7 @@
         </div>
     </div>
 </div>
-
+<script src="../assets/js/bootsrap/jquery-3.7.0.min.js"></script>
 <script src="../controller/loginController.js"></script>
 </body>
 </html>
