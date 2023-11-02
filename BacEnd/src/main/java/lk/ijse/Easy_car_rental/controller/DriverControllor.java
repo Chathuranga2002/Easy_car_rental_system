@@ -30,4 +30,13 @@ public class DriverControllor {
         service.saveDriver(dto);
         return new ResponseUtil("OK","Successfully Registered..!",null);
     }
+
+    @GetMapping
+    public ResponseUtil getAllCustomers() {
+        return new ResponseUtil("OK", "Successfully Loaded. : ", service.getAllDrivers());
+
+    }
+
+
+
 }
