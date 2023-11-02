@@ -16,7 +16,7 @@
         <ul>
             <li>
                 <a href="#">
-                    <span class="icon"><img src="assests/pic_vid/pic/LogoCar.png" alt="" style="width: 25px; height: 20px"></span>
+                    <span class="icon"><img src="" alt="" style="width: 25px; height: 20px"></span>
                     <span class="title">Easy Car Rental</span>
                     <div class="col-2">
                         <div class="mb-3" style="display: none">
@@ -78,7 +78,7 @@
             </div>
 
             <div class="user">
-                <img src="assets/imgs/customer01.jpg" alt="">
+                <img src="" alt="">
             </div>
         </div>  <!--Top bar seen over-->
 
@@ -552,7 +552,16 @@
     console.log(username)
     const usernameButton = document.getElementById("lblCusNIC");
     usernameButton.value = username;
-         // usernameButton.
+
+    // Get the input element by its id
+    var inputElement = document.getElementById("lblCusNIC");
+
+    // Read the value of the input field
+    var value = inputElement.value;
+
+    // Use the 'value' variable for further processing or logging
+    console.log("The value of the input field is: " + value);
+
 </script>
 
 

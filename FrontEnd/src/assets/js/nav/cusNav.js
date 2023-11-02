@@ -26,30 +26,24 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("ProfileF").style.display = 'inline-block';
     document.getElementById("BookingRequestF").style.display = 'none';
     document.getElementById("BookingResponsesF").style.display = 'none';
-    document.getElementById("PaymentsF").style.display = 'none';
+
 
 });
 document.getElementById("ProfileForm").addEventListener('click', function () {
     document.getElementById("ProfileF").style.display = 'inline-block';
     document.getElementById("BookingRequestF").style.display = 'none';
     document.getElementById("BookingResponsesF").style.display = 'none';
-    document.getElementById("PaymentsF").style.display = 'none';
+
 });
 document.getElementById("BookingRequestForm").addEventListener('click', function () {
     document.getElementById("ProfileF").style.display = 'none';
     document.getElementById("BookingRequestF").style.display = 'inline-block';
     document.getElementById("BookingResponsesF").style.display = 'none';
-    document.getElementById("PaymentsF").style.display = 'none';
+
 });
 document.getElementById("BookingResponsesForm").addEventListener('click', function () {
     document.getElementById("ProfileF").style.display = 'none';
     document.getElementById("BookingRequestF").style.display = 'none';
     document.getElementById("BookingResponsesF").style.display = 'inline-block';
-    document.getElementById("PaymentsF").style.display = 'none';
-});
-document.getElementById("PaymentsForm").addEventListener('click', function () {
-    document.getElementById("ProfileF").style.display = 'none';
-    document.getElementById("BookingRequestF").style.display = 'none';
-    document.getElementById("BookingResponsesF").style.display = 'none';
-    document.getElementById("PaymentsF").style.display = 'inline-block';
+
 });
