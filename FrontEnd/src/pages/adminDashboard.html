@@ -406,32 +406,47 @@
         <!--==============Driver Page Open===============================================================-->
         <div class="driverBox" id="DriverF">  <!--Driver  seen open-->
             <h1>Driver Details</h1>
+            <form id="DriverFormData">
             <div class="driverDetails">
                 <div class="col-3">
                     <div class="mb-3">
-                        <label class="form-label mb-0" for="txtDriverId">Driver ID</label>
-                        <input class="form-control" id="txtDriverId" name="driverId" placeholder="Eg:- D001"
+                        <label class="form-label mb-0" for="txtDriverId">Nic</label>
+                        <input class="form-control" id="txtDriverId" name="nic" placeholder=""
                                type="text">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="txtDriverName">Name</label>
-                        <input class="form-control" id="txtDriverName" name="driverName" placeholder="Eg:- Nimal Bandara"
+                        <input class="form-control" id="txtDriverName" name="name" placeholder="Eg:- Nimal Bandara"
                                type="text">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="txtDriverContactNo">Contact No</label>
-                        <input class="form-control" id="txtDriverContactNo" name="driverContactNo" placeholder="Eg:- 0765401908"
+                        <input class="form-control" id="txtDriverContactNo" name="contactNo" placeholder="Eg:- 0765401908"
                                type="text">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="mb-3">
-                        <label class="form-label mb-0" for="txtDriverEmail">Email</label>
-                        <input class="form-control" id="txtDriverEmail" name="driverEmail" placeholder="Eg:- nimal@gmail.com"
+                        <label class="form-label mb-0" for="txtDriverEmail">Address</label>
+                        <input class="form-control" id="txtDriverEmail" name="address" placeholder=""
+                               type="text">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="mb-3">
+                        <label class="form-label mb-0" for="txtDriverNICNo">Licence No</label>
+                        <input class="form-control" id="txtDriverNICNo" name="licenceNo" placeholder="Eg:- B1234567"
+                               type="text">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="mb-3">
+                        <label class="form-label mb-0" for="txtLicenceNo">User Name</label>
+                        <input class="form-control" id="txtLicenceNo" name="username" placeholder="Eg:- B1234567"
                                type="text">
                     </div>
                 </div>
@@ -439,31 +454,19 @@
                 <div class="col-4">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="txtDriverPassword">Password</label>
-                        <input class="form-control" id="txtDriverPassword" name="driverUsername" type="password">
+                        <input class="form-control" id="txtDriverPassword" name="password" type="password">
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label class="form-label mb-0" for="txtDriverNICNo">NIC No</label>
-                        <input class="form-control" id="txtDriverNICNo" name="driverNICNo" placeholder="Eg:- 992200863V"
-                               type="text">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="mb-3">
-                        <label class="form-label mb-0" for="txtLicenceNo">Licence No</label>
-                        <input class="form-control" id="txtLicenceNo" name="licenceNo" placeholder="Eg:- B1234567"
-                               type="text">
-                    </div>
-                </div>
+
                 <br>
 
 
             </div>
+            </form>
             <!--Buttons-->
             <div class="driverButtons row m-3">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <button class="btn btn-success mt-3 " id="btnSaveDriver" type="button">Save</button>
+                    <button class="btn btn-success mt-3 " id="btnSaveDrivers" type="button">Save</button>
                     <button class="btn btn-danger mt-3" disabled="" id="btnDeleteDriver" type="button">Delete</button>
                     <button class="btn btn-warning mt-3" disabled="" id="btnUpdateDriver" type="button">Update</button>
                     <button class="btn btn-secondary mt-3" id="btnClearDriver" type="button">Clear</button>
@@ -727,7 +730,9 @@
 <!-- ====== Scripts ======= -->
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script src="../assets/js/nav/adminNav.js"></script>
+<script src="../controller/admin/DriverController.js"></script>
 <script src="../controller/admin/CarController.js"></script>
+
 
 <!-- ====== ionicons ======= -->
 <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>

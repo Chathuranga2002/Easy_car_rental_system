@@ -29,11 +29,7 @@ $("#BtnSaveCar").click(function () {
 
 });
 
-/*Save Car*/
-$("#BtnDelCar").click(function () {
-    let img =$("#backViewImg");
-    console.log(img)
-});
+
 
 
 
