@@ -45,50 +45,42 @@
 
 <!--             sign up Page-->
 
-            <form action="#" class="sign-up-form">
+            <form id="signUpForm" class="sign-up-form" name="signUpForm">
                 <h2 class="title">Sign up</h2>
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input placeholder="cus Id" type="text" readonly/>
-                </div>
-
-                <div class="input-field">
-                    <i class="fas fa-envelope"></i>
-                    <input placeholder="Name" type="name"/>
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input placeholder="Address" type="address"/>
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input placeholder="Email" type="email"/>
-                </div>
-
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input placeholder="Contact" type="text"/>
-                </div>
 
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input placeholder="Nic" type="text"/>
+                    <input placeholder="Nic" type="text" name="nicNo"/>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input placeholder="Name" type="name" name="name"/>
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input placeholder="User name" type="text"/>
+                    <input placeholder="Address" type="address" name="address"/>
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input placeholder="Password" type="password"/>
-                </div>
-                <!--            file selector-->
-                <div class="mb-3  custom1">
-                    <label for="formFile" class="form-label custom2">Nic Image</label>
-                    <input class="form-control custom3" type="file" id="formFile">
+                    <input placeholder="Email" type="email" name="email"/>
                 </div>
 
-                <input class="btn" type="submit" value="Sign up"/>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input placeholder="Contact" type="text" name="contactNo"/>
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input placeholder="User name" type="text" name="username"/>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input placeholder="Password" type="password" name="password"/>
+                </div>
+
+
+                <input class="btn" type="button" value="Sign up" id="btnSignUp" />
                 <ul style="display: none;">
                     <li><a href="../pages/DriverDashboard.html" id="driverDash">Page 1</a></li>
                     <li><a href="../pages/adminDashboard.html" id="adminDash">Page 2</a></li>

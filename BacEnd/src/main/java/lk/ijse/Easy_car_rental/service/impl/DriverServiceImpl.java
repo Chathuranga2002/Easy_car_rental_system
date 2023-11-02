@@ -2,6 +2,7 @@ package lk.ijse.Easy_car_rental.service.impl;
 
 import lk.ijse.Easy_car_rental.dto.DriverDTO;
 import lk.ijse.Easy_car_rental.entity.Admin;
+import lk.ijse.Easy_car_rental.entity.Customer;
 import lk.ijse.Easy_car_rental.entity.Driver;
 import lk.ijse.Easy_car_rental.repo.AdminRepo;
 import lk.ijse.Easy_car_rental.repo.DriverRepo;
@@ -15,8 +16,7 @@ import javax.transaction.Transactional;
 @Service
 @Transactional
 public class DriverServiceImpl  implements DriverService {
-    @Autowired
-    DriverRepo adminRepo;
+
 
     @Autowired
     ModelMapper mapper;
@@ -33,5 +33,13 @@ public class DriverServiceImpl  implements DriverService {
             throw new RuntimeException( " wrong username or password");
         }
 
+    }
+
+    @Override
+    public void saveDriver(DriverDTO dto) {
+        if (repo.existsById(dto.getNic())){
+            throw new RuntimeException("Car already Exists.. Please enter another ID..");
+        }
+        repo.save(mapper.map(dto, Driver.class));
     }
 }

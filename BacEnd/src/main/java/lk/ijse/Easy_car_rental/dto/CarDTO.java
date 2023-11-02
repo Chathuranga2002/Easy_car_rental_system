@@ -21,7 +21,15 @@ public class CarDTO {
     private double completeKm;
     private String status;
 
-    private PriceDTO price;
-    private CarImgDTO images;
+    private String frontViewImg;
+    private String backViewImg;
+    private String sideViewImg;
+    private String internalViewImg;
+
+    private double dailyRate;
+    private double freeKmForDay;
+    private double monthlyRate;
+    private double freeKmForMonth;
+    private double pricePerExtraKm;
 
 }

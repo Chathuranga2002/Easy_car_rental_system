@@ -21,7 +21,7 @@ public class CarRent {
     private double advance;
 
     @ManyToOne( cascade = CascadeType.ALL)
-    @JoinColumn(name = "cusId", referencedColumnName = "cusId")
+    @JoinColumn(name = "nicNo", referencedColumnName = "nicNo")
     private Customer customer;
 
     @ManyToOne

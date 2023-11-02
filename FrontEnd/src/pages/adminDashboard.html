@@ -9,6 +9,8 @@
     <!-- ======= Styles ====== -->
     <link href="../assets/css/custom/dashboard.css" rel="stylesheet">
 
+
+
 </head>
 
 <body>
@@ -163,12 +165,13 @@
         <!--==============Cars page===============================================================-->
         <div class="carBox" id="CarF">  <!--Car  seen open-->
             <h1>Car Details</h1>
+            <form id="CarForm1">
             <div class="carDetails">
 
                 <div class="col-2">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="txtRegNo">Registration Id</label>
-                        <input class="form-control" id="txtRegNo" name="regNo" placeholder="CAB-4525" type="text">
+                        <input class="form-control" id="txtRegNo" name="registrationNO" placeholder="CAB-4525" type="text">
                     </div>
                 </div>
                 <div class="col-2">
@@ -181,32 +184,32 @@
                     <label class="form-label mb-0" for="cmbtype">Type</label>
                     <select aria-label="Default select example" class="form-select" id="cmbtype" name="type">
                         <option selected="">- Select Car Type -</option>
-                        <option value="1">General</option>
-                        <option value="2">Premium</option>
-                        <option value="3">Luxury</option>
+                        <option value="General">General</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Luxury">Luxury</option>
                     </select>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="txtNoOfPassengers">No Of Passengers</label>
-                        <input class="form-control" id="txtNoOfPassengers" name="noOfPassengers" type="text">
+                        <input class="form-control" id="txtNoOfPassengers" name="passengersCount" type="text">
                     </div>
                 </div>
                 <div class="col-2">
                     <label class="form-label mb-0" for="cmbTransmissionType">Transmission</label>
                     <select aria-label="Default select example" class="form-select" id="cmbTransmissionType"
-                            name="transmission">
+                            name="transmissionType">
                         <option selected="">- Select Transmission -</option>
-                        <option value="1">Manual</option>
-                        <option value="2">Auto</option>
+                        <option value="Manual">Manual</option>
+                        <option value="Auto">Auto</option>
                     </select>
                 </div>
                 <div class="col-2">
                     <label class="form-label mb-0" for="cmbfuel">Fuel</label>
-                    <select aria-label="Default select example" class="form-select" id="cmbfuel" name="fuel">
+                    <select aria-label="Default select example" class="form-select" id="cmbfuel" name="fuelType">
                         <option selected="">- Select Fuel Type -</option>
-                        <option value="1">Petrol</option>
-                        <option value="2">Diesel</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
                     </select>
                 </div>
                 <div class="col-2">
@@ -214,37 +217,37 @@
                         <label class="form-label mb-0" for="cmbColor">Color</label>
                         <select aria-label="Default select example" class="form-select" id="cmbColor" name="color">
                             <option selected="">- Select Color -</option>
-                            <option value="1">Black</option>
-                            <option value="2">White</option>
-                            <option value="3">Red</option>
-                            <option value="4">Blue</option>
-                            <option value="5">Orange</option>
-                            <option value="6">Silver</option>
+                            <option value="Black">Black</option>
+                            <option value="White">White</option>
+                            <option value="Red">Red</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Silver">Silver</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="frontViewImg">Front Image</label>
-                        <input class="form-control" id="frontViewImg" name="imgFrontView" type="file">
+                        <input class="form-control" id="frontViewImg" name="frontViewImg" type="file">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="backViewImg">back Image</label>
-                        <input class="form-control" id="backViewImg" name="imgFrontView" type="file">
+                        <input class="form-control" id="backViewImg" name="backViewImg" type="file">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="sideViewImg">side Image</label>
-                        <input class="form-control" id="sideViewImg" name="imgFrontView" type="file">
+                        <input class="form-control" id="sideViewImg" name="sideViewImg" type="file">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="internalViewImg">internal Image</label>
-                        <input class="form-control" id="internalViewImg" name="imgFrontView" type="file">
+                        <input class="form-control" id="internalViewImg" name="internalViewImg" type="file">
                     </div>
                 </div>
 
@@ -257,7 +260,7 @@
                 <div class="col-2">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="txtFreeKmForPrice">Free KM For Day</label>
-                        <input class="form-control" id="txtFreeKmForPrice" name="freeKmForPrice" type="text">
+                        <input class="form-control" id="txtFreeKmForPrice" name="freeKmForDay" type="text">
                     </div>
                 </div>
                 <div class="col-2">
@@ -269,24 +272,25 @@
                 <div class="col-2">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="txtFreeKmForMonthPrice">Free KM For Month</label>
-                        <input class="form-control" id="txtFreeKmForMonthPrice" name="freeKmForMonthPrice" type="text">
+                        <input class="form-control" id="txtFreeKmForMonthPrice" name="freeKmForMonth" type="text">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="txtPriceForExtraKm">Price For Extra Km
                             (Rs.)</label>
-                        <input class="form-control" id="txtPriceForExtraKm" name="priceForExtraKm" type="text">
+                        <input class="form-control" id="txtPriceForExtraKm" name="pricePerExtraKm" type="text">
                     </div>
                 </div>
 
             </div>
+            </form >
             <!--Buttons-->
 
             <div class="carBtn row m-3">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <button class="btn btn-success mt-3 " id="saveCar" type="button">Save</button>
-                    <button class="btn btn-danger mt-3" disabled="" id="delCar" type="button">Delete</button>
+                    <button class="btn btn-success mt-3 " id="BtnSaveCar" type="button">Save</button>
+                    <button class="btn btn-danger mt-3" disabled="" id="BtnDelCar" type="button">Delete</button>
                     <button class="btn btn-warning mt-3" disabled="" id="updateCar" type="button">Update</button>
                     <button class="btn btn-secondary mt-3" id="clearCar" type="button">Clear</button>
                 </div>
@@ -721,7 +725,9 @@
 </div>
 
 <!-- ====== Scripts ======= -->
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script src="../assets/js/nav/adminNav.js"></script>
+<script src="../controller/admin/CarController.js"></script>
 
 <!-- ====== ionicons ======= -->
 <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
@@ -730,6 +736,7 @@
 <script src="../assets/js/bootsrap/bootstrap.js"></script>
 <script src="../assets/js/bootsrap/bootstrap.min.js"></script>
 
+<!--controlers-->
 
 </body>
 

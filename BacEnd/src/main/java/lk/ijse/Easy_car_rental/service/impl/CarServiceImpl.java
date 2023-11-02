@@ -1,5 +1,6 @@
 package lk.ijse.Easy_car_rental.service.impl;
 
+import lk.ijse.Easy_car_rental.dto.CarDTO;
 import lk.ijse.Easy_car_rental.entity.Car;
 import lk.ijse.Easy_car_rental.repo.CarRepo;
 import lk.ijse.Easy_car_rental.service.CarService;
@@ -21,13 +22,23 @@ public class CarServiceImpl implements CarService {
     @Autowired
     private CarRepo repo;
 
-
-
     @Override
-    public void saveCar(Car dto) {
+    public void saveCar(CarDTO dto) {
         if (repo.existsById(dto.getRegistrationNO())){
-            throw new RuntimeException(dto.getRegistrationNO()+ " : Item already registered.!");
+            throw new RuntimeException("Car already Exists.. Please enter another ID..");
         }
-        repo.save(dto);
+        repo.save(mapper.map(dto, Car.class));
     }
+
+
+
+
+//    @Override
+//    public void saveCar(Car dto) {
+//        if (repo.existsById(dto.getRegistrationNO())){
+//            throw new RuntimeException(dto.getRegistrationNO()+ " : Item already registered.!");
+//        }
+//        repo.save(dto);
+
+
 }

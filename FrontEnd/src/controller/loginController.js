@@ -1,5 +1,6 @@
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const login = document.querySelector("#loginButton");
+const signUp = document.querySelector("#btnSignUp");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 
@@ -12,7 +13,7 @@ sign_up_btn.addEventListener("click", () => {container.classList.add("sign-up-mo
 sign_in_btn.addEventListener("click", () => {
     container.classList.remove("sign-up-mode");
 });
-
+//login
 login.addEventListener("click",() =>{
     let userType =  $("#userType1").val();
 
@@ -85,4 +86,26 @@ login.addEventListener("click",() =>{
     }
 
 });
-
+//sign up
+signUp.addEventListener("click",() =>{
+    let formData = $("#signUpForm").serialize();
+    $.ajax({
+        url:baseUrl+"Customer",
+        method:"post",
+        data:formData,
+        dataType: "json",
+        success:function (res) {
+            //Invoked if the response status code is in 200 range
+            console.log("Success Method Invoked");
+            console.log(res);
+            alert(res.message);
+            getAllCars();
+        },
+        error:function (error) {
+            //Invokes if status code range is 500 range or 400 range
+            console.log("Error Method Invoked");
+            console.log(JSON.parse(error.responseText));
+            alert(JSON.parse(error.responseText).message);
+        }
+    });
+});

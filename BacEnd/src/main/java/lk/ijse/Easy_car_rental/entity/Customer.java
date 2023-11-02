@@ -19,12 +19,11 @@ import java.util.List;
 @Entity
 public class Customer {
     @Id
-    private String cusId;
+    private String nicNo;
     private String name;
     private String address;
     private String email;
-    private int contactNo;
-    private String nicNo;
+    private String contactNo;
     private String username;
     private String password;
     private String nicFrontImg;
