@@ -1,5 +1,3 @@
-// let baseUrl="http://localhost:8081/easycarrental/"
-let baseUrl= "http://localhost:8080/BacEnd_war/";
 
 // getAllCars();
 /*Save Car*/

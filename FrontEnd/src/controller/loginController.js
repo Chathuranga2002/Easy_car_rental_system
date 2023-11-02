@@ -5,7 +5,7 @@ const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 const profileLink = document.getElementById("profileLink");
 
-let baseUrl = "http://localhost:8080/BacEnd_war/";
+const baseUrl = "http://localhost:8080/BacEnd_war/";
 
 
 

@@ -20,7 +20,7 @@
         <ul>
             <li>
                 <a href="#">
-                    <span class="icon"><img alt="" src="assests/pic_vid/pic/LogoCar.png"
+                    <span class="icon"><img alt="" src=""
                                             style="width: 25px; height: 20px"></span>
                     <span class="title">Easy Car Rental</span>
                 </a>
@@ -95,7 +95,7 @@
             </div>
 
             <div class="user">
-                <img alt="" src="assets/imgs/customer01.jpg">
+                <img alt="" src="">
             </div>
         </div>  <!--Top bar seen over-->
 
@@ -443,6 +443,13 @@
                                type="text">
                     </div>
                 </div>
+                <div class="col-4">
+                    <div class="mb-3">
+                        <label class="form-label mb-0" for="txtDriverNICNo">availability</label>
+                        <input class="form-control" id="txtDriverStatus" name="availability" type="text"
+                              placeholder="true" readonly value="true">
+                    </div>
+                </div>
                 <div class="col-3">
                     <div class="mb-3">
                         <label class="form-label mb-0" for="txtLicenceNo">User Name</label>
@@ -483,15 +490,13 @@
                 <table class="table table-hover table-bordered table-striped" id="registeredDriversTbl">
                     <thead class="bg-info">
                     <tr>
-                        <th>Driver ID</th>
+                        <th>NIC</th>
                         <th>Driver Name</th>
                         <th>Contact No</th>
-                        <th>Email</th>
-                        <th>Password</th>
-                        <th>NIC No</th>
+                        <th>Status</th>
+                        <th>Address</th>
                         <th>Licence No</th>
-                        <th>Driver Licence Img</th>
-                        <th>Driver NIC Img</th>
+                        <th>User Name</th>
                     </tr>
                     </thead>
                     <tbody id="tblRegisteredDrivers"></tbody>
@@ -707,10 +712,13 @@
     </div>
 
 </div>
-
+<script src="../assets/js/nav/adminNav.js"></script>
 <!-- ====== Scripts ======= -->
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
-<script src="../assets/js/nav/adminNav.js"></script>
+<!--base url-->
+<script src="../controller/Baseurl.js"></script>
+
+<!--<script src="../controller/admin/AdminController.js"></script>-->
 <script src="../controller/admin/DriverController.js"></script>
 <script src="../controller/admin/CarController.js"></script>
 
@@ -719,7 +727,7 @@
 <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<script src="../assets/js/bootsrap/bootstrap.js"></script>
+
 <script src="../assets/js/bootsrap/bootstrap.min.js"></script>
 
 <!--controlers-->

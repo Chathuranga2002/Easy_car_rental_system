@@ -1,5 +1,5 @@
-let baseUrl= "http://localhost:8080/BacEnd_war/";
 
+getAllDrivers();
 /*Save driver*/
 $("#btnSaveDrivers").click(function () {
     console.log("sss")
@@ -28,5 +28,34 @@ $("#btnSaveDrivers").click(function () {
 });
 
 
+// get all Drivers
+function getAllDrivers() {
+    $("#tblRegisteredDrivers").empty();
 
+    $.ajax({
+        url: baseUrl +'Driver',
+        dataType: "json",
+        success: function (response) {
+            let drivers = response.data;
+            for (let i in drivers) {
+                let dri = drivers[i];
 
+                let nic = dri.nic;
+                let name1 = dri.name;
+                let address1 = dri.address;
+                let tel = dri.contactNo;
+                let userName = dri.username;
+                let availability = dri.availability;
+                let liNo = dri.licenceNo;
+
+                let row = `<tr><td>${nic}</td><td>${name1}</td><td>${tel}</td><td>${availability}</td><td>${address1}</td><td>${liNo}</td><td>${userName}</td></tr>`;
+                $("#tblRegisteredDrivers").append(row);
+                // bindRowClickEvents();
+                // setTextFieldValues("","","","","","","");
+            }
+        },
+        error: function (error) {
+            alert(error.responseJSON.message);
+        }
+    });
+}
