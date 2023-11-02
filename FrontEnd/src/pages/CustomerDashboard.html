@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../assets/css/CustomerDashboard.css">
 
 
-
 </head>
 <body>
 <!--========Navigations=======-->
@@ -19,8 +18,14 @@
                 <a href="#">
                     <span class="icon"><img src="assests/pic_vid/pic/LogoCar.png" alt="" style="width: 25px; height: 20px"></span>
                     <span class="title">Easy Car Rental</span>
+                    <div class="col-2">
+                        <div class="mb-3" style="display: none">
+                            <input type="text" class="form-control" id="lblCusNIC" name="lblCusNIC" disabled="">
+                        </div>
+                    </div>
                 </a>
             </li>
+
             <li>
                 <a href="#ProfileF" id="ProfileForm">
                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
@@ -537,14 +542,28 @@
     </div>
 
 </div>
+<script>
+    function getUsernameFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get("username");
+    }
 
+    const username = getUsernameFromURL();
+    console.log(username)
+    const usernameButton = document.getElementById("lblCusNIC");
+    usernameButton.value = username;
+         // usernameButton.
+</script>
 
 
 <script src="../assets/js/nav/cusNav.js"></script>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
+<script src="../controller/admin/CustomerController.js"></script>
 
 <!-- ====== ionicons ======= -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
 
 </body>

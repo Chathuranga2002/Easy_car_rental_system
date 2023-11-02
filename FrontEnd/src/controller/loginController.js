@@ -3,6 +3,7 @@ const login = document.querySelector("#loginButton");
 const signUp = document.querySelector("#btnSignUp");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
+const profileLink = document.getElementById("profileLink");
 
 let baseUrl = "http://localhost:8080/BacEnd_war/";
 
@@ -29,8 +30,8 @@ login.addEventListener("click",() =>{
             data: "",
             dataType: "",
             success: function (res) {
-
-                document.getElementById("adminDash").click();
+                profileLink.href = `../pages/adminDashboard.html?username=${username}`;
+                document.getElementById("profileLink").click();
 
                 alert(res.message);
             },
@@ -51,8 +52,8 @@ login.addEventListener("click",() =>{
             data: "",
             dataType: "",
             success: function (res) {
-
-                document.getElementById("CustomerDash").click();
+                profileLink.href = `../pages/CustomerDashboard.html?username=${username}`;
+                document.getElementById("profileLink").click();
 
                 alert(res.message);
             },
@@ -74,7 +75,8 @@ login.addEventListener("click",() =>{
             dataType: "",
             success: function (res) {
 
-                document.getElementById("driverDash").click();
+                profileLink.href = `../pages/DriverDashboard.html?username=${username}`;
+                document.getElementById("profileLink").click();
 
                 alert(res.message);
             },
@@ -109,3 +111,17 @@ signUp.addEventListener("click",() =>{
         }
     });
 });
+
+// Function to extract the username from the URL query parameters
+// function getUsernameFromURL() {
+//     const urlParams = new URLSearchParams(window.location.search);
+//     return urlParams.get("username");
+// }
+//
+// // Get the username from the URL or set a default value
+// const username = getUsernameFromURL(); // You can set your default username here.
+
+
+
+
+
