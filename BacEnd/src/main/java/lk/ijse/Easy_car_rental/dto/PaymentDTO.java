@@ -14,12 +14,11 @@ import javax.persistence.Id;
 @ToString
 public class PaymentDTO {
     private String rentId;
-    private String cusId;
+    private String nicNo;;
     private double advance;
     private double timeCost;
     private double extraKm;
     private double damage;
     private double total;
-
 
 }

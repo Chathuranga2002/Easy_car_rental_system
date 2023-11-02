@@ -17,7 +17,8 @@ public class CarRent {
     private String rentId;
     private String rentType;
     private String pickUpDate;
-    private String returnDate;
+    private int dayCount;
+    private double advance;
 
     @ManyToOne( cascade = CascadeType.ALL)
     @JoinColumn(name = "cusId", referencedColumnName = "cusId")

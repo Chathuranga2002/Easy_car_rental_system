@@ -520,48 +520,100 @@
 
         <!--===============================================================================================-->
         <!--==============Payments Page Open===============================================================-->
-        <div class="paymentBox" id="PaymentF">  <!--Payments  seen open-->
+        <div class="customerBox" id="PaymentF">  <!--Payments  seen open-->
             <h1>Payments</h1>
-            <div class="paymentsDetails">
-                <div class="row m-3">
-                    <div class="paymentBtnDates d-grid gap-2 d-md-flex justify-content-md-center">
-
-                        <label class="form-label" for="pickFromDate" style="font-size: 20px; color: black">From</label>
-                        <input class="form-control" id="pickFromDate" name="fromDate" placeholder="Start Date"
-                               type="date">
-
-
-                        <label class="form-label" for="pickFromDate" style="font-size: 20px; color: black">To</label>
-                        <input class="form-control" id="pickToDate" name="toDate" placeholder="End Date" type="date">
-
-                        <div class="btnOfPayments">
-                            <button class="btnSearchPayment btn-primary mt-3" id="btnSearchPayment"
-                                    style="height: 50px;width: 100px; border-radius: 20px;" type="button">Search
-                            </button>
-                            <button class="btnClearPayment btn-warning mt-3 ms-2" id="btnClearDates"
-                                    style="height: 50px;width: 100px; border-radius: 20px;" type="button">Clear
-                            </button>
-                        </div>
+            <div class="customerDetails">
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label class="form-label mb-0">RentID</label>
+                        <!--                            <input type="text" class="form-control" id="txtCustomerId" name="customerId" disabled="">-->
+                        <input class="form-control" id="txtPaymentRentId" name="Id" type="text">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label class="form-label mb-0">Advance</label>
+                        <!--                            <input type="text" class="form-control" id="txtCustomerName" name="customerName" disabled="">-->
+                        <input class="form-control" id="txtPaymentAdvance" name="Date" type="text" disabled="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label class="form-label mb-0">CusId</label>
+                        <!--                            <input type="text" class="form-control" id="txtCustomerName" name="customerName" disabled="">-->
+                        <input class="form-control" id="txtPaymentCusId" name="Date" type="text" disabled="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label class="form-label mb-0">Damage</label>
+                        <!--                            <input type="text" class="form-control" id="txtCustomerName" name="customerName" disabled="">-->
+                        <input class="form-control" id="txtPaymentDamge" name="Date" type="text">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label class="form-label mb-0">Extra Km</label>
+                        <!--                            <input type="text" class="form-control" id="txtCustomerName" name="customerName" disabled="">-->
+                        <input class="form-control" id="txtPaymentExtrakm" name="Date" type="text">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label class="form-label mb-0">Extra Km Cost</label>
+                        <!--                            <input type="text" class="form-control" id="txtCustomerName" name="customerName" disabled="">-->
+                        <input class="form-control" id="txtPaymentExtrakmCost" name="Date" type="text" disabled="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label class="form-label mb-0">Time Cost</label>
+                        <!--                            <input type="text" class="form-control" id="txtCustomerName" name="customerName" disabled="">-->
+                        <input class="form-control" id="txtPaymentTimeCost" name="Date" type="text" disabled="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label class="form-label mb-0">total</label>
+                        <!--                            <input type="text" class="form-control" id="txtCustomerName" name="customerName" disabled="">-->
+                        <input class="form-control" id="txtPaymentTotal" name="Date" type="text" disabled="">
                     </div>
                 </div>
 
             </div>
+            <div class="customerButtons col-4">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button class="btn btn-success mt-3" id="btnAcceptPayment" type="button">Pay</button>
+                    <button class="btn btn-secondary mt-3" id="btnClearPayment" type="button">Clear</button>
+                </div>
+            </div>
+<!--            <div class="paymentsDetails">-->
+<!--                <div class="row m-3">-->
+<!--                    <div class="paymentBtnDates d-grid gap-2 d-md-flex justify-content-md-center">-->
+
+<!--                        <label class="form-label" for="pickFromDate" style="font-size: 20px; color: black">From</label>-->
+<!--                        <input class="form-control" id="pickFromDate" name="fromDate" placeholder="Start Date"-->
+<!--                               type="date">-->
+
+
+<!--                        <label class="form-label" for="pickFromDate" style="font-size: 20px; color: black">To</label>-->
+<!--                        <input class="form-control" id="pickToDate" name="toDate" placeholder="End Date" type="date">-->
+
+<!--                        <div class="btnOfPayments">-->
+<!--                            <button class="btnSearchPayment btn-primary mt-3" id="btnSearchPayment"-->
+<!--                                    style="height: 50px;width: 100px; border-radius: 20px;" type="button">Search-->
+<!--                            </button>-->
+<!--                            <button class="btnClearPayment btn-warning mt-3 ms-2" id="btnClearDates"-->
+<!--                                    style="height: 50px;width: 100px; border-radius: 20px;" type="button">Clear-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
 
             <!--<div class="bg-light row overflow-scroll" style="height: 65vh">-->
-            <div class="paymentTable bg-light row overflow-scroll">
-                <table class="table table-hover table-bordered table-striped" id="paymentsTbl">
-                    <thead class="bg-info">
-                    <tr>
-                        <th>Payment ID</th>
-                        <th>Date</th>
-                        <th>Amount (Rs.)</th>
-                        <th>Rent ID</th>
-                        <th>Customer ID</th>
-                    </tr>
-                    </thead>
-                    <tbody id="tblPayments"></tbody>
-                </table>
-            </div>
+
         </div> <!--Payments  seen over-->
         <!--==============Payments Page Over===============================================================-->
 

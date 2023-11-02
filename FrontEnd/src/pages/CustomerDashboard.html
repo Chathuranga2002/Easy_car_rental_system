@@ -39,12 +39,12 @@
                     <span class="title">Booking Responses</span>
                 </a>
             </li>
-            <li>
-                <a href="#PaymentsF" id="PaymentsForm">
-                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                    <span class="title">Payments</span>
-                </a>
-            </li>
+<!--            <li>-->
+<!--                <a href="#PaymentsF" id="PaymentsForm">-->
+<!--                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>-->
+<!--                    <span class="title">Payments</span>-->
+<!--                </a>-->
+<!--            </li>-->
             <br><br><br><br>
             <li>
                 <a href="../index.html" id="logout">
@@ -311,20 +311,22 @@
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
-                        <label for="txtCarTodayDate" class="form-label mb-0">Today</label>
-                        <input type="text" class="form-control" id="txtCarTodayDate" name="carTodayDate" disabled="">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="mb-3">
                         <label for="txtCarPickupDate" class="form-label mb-0">Pickup Date</label>
                         <input type="date" class="form-control" id="txtCarPickupDate" name="carPickupDate">
                     </div>
                 </div>
                 <div class="col-2">
+                    <label for="cmbType" class="form-label mb-0">Rent Type</label>
+                    <select class="form-select" aria-label="Default select example" id="cmbRentType" name="type">
+                        <option selected="">- Select Rent Type -</option>
+                        <option value="1">Month</option>
+                        <option value="2">Day</option>
+                    </select>
+                </div>
+                <div class="col-3">
                     <div class="mb-3">
-                        <label for="txtCarReturnDate" class="form-label mb-0">Return Date</label>
-                        <input type="date" class="form-control" id="txtCarReturnDate" name="carReturnDate">
+                        <label for="txtPaymentAmount" class="form-label mb-0">How many days/month ? (Rs.)</label>
+                        <input type="text" class="form-control" id="txtRantDayCount" name="txtRantDayCount">
                     </div>
                 </div>
                 <div class="col-3 d-flex align-items-center justify-content-center">
@@ -344,12 +346,7 @@
                         <input type="text" class="form-control" id="txtDriverName" name="driverName" disabled="">
                     </div>
                 </div>
-                <div class="col-2">
-                    <div class="mb-3">
-                        <label for="txtDriverAddress" class="form-label mb-0">Driver Address</label>
-                        <input type="text" class="form-control" id="txtDriverAddress" name="driverAddress" disabled="">
-                    </div>
-                </div>
+
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtDriverContactNo" class="form-label mb-0">Driver Contact No</label>
@@ -489,30 +486,30 @@
 
         <!--==============Payments page===============================================================-->
 
-        <div class="paymentsBox" id="PaymentsF">  <!--Payments seen open-->
-            <h1 >Payments</h1>
-            <div class="paymentsDetails">
+<!--        <div class="paymentsBox" id="PaymentsF">  &lt;!&ndash;Payments seen open&ndash;&gt;-->
+<!--            <h1 >Payments</h1>-->
+<!--            <div class="paymentsDetails">-->
 
-            </div>
-            <!--======Car Table=======-->
-            <div class="CusPaymentsTable row overflow-scroll">
-                <table class="table table-hover table-bordered table-striped" id="paymentsTbl">
-                    <thead class="bg-info">
-                    <tr>
-                        <th>Payment ID</th>
-                        <th>Date</th>
-                        <th>Amount</th>
-                        <th>Customer ID</th>
-                        <th>Rent ID</th>
-                    </tr>
-                    </thead>
-                    <tbody id="paymentsTable">
+<!--            </div>-->
+<!--            &lt;!&ndash;======Car Table=======&ndash;&gt;-->
+<!--            <div class="CusPaymentsTable row overflow-scroll">-->
+<!--                <table class="table table-hover table-bordered table-striped" id="paymentsTbl">-->
+<!--                    <thead class="bg-info">-->
+<!--                    <tr>-->
+<!--                        <th>Payment ID</th>-->
+<!--                        <th>Date</th>-->
+<!--                        <th>Amount</th>-->
+<!--                        <th>Customer ID</th>-->
+<!--                        <th>Rent ID</th>-->
+<!--                    </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody id="paymentsTable">-->
 
-                    </tbody>
-                </table>
+<!--                    </tbody>-->
+<!--                </table>-->
 
-            </div>
-        </div>
+<!--            </div>-->
+<!--        </div>-->
         <!--==============Payments Page Over===============================================================-->
         <!--=================================================================================================-->
 

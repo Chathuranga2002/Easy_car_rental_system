@@ -13,7 +13,7 @@ public class CarRentDTO {
     private String rentId;
     private String rentType;
     private String pickUpDate;
-    private String returnDate;
+    private int dayCount;
     private CustomerDTO customer;
     private CarDTO car;
     private DriverDTO driver;
