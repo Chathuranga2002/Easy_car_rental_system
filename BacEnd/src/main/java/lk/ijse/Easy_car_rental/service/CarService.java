@@ -5,10 +5,11 @@ import lk.ijse.Easy_car_rental.dto.DriverDTO;
 import lk.ijse.Easy_car_rental.entity.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public interface CarService  {
-    public void saveCar(CarDTO dto);
+    public void saveCar(CarDTO dto) throws IOException;
 
     ArrayList<CarDTO> getAllDrivers();
 }

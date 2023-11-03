@@ -88,29 +88,53 @@ login.addEventListener("click",() =>{
     }
 
 });
+
+
 //sign up
-signUp.addEventListener("click",() =>{
-    let formData = $("#signUpForm").serialize();
+$("#btnSignUp").click(function () {
+    let formData = new FormData($("#signUpForm")[0]);
     $.ajax({
-        url:baseUrl+"Customer",
-        method:"post",
-        data:formData,
-        dataType: "json",
-        success:function (res) {
-            //Invoked if the response status code is in 200 range
-            console.log("Success Method Invoked");
-            console.log(res);
-            alert(res.message);
+        url: baseUrl + "Customer",
+        method: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (rep) {
+            alert(rep.message);
 
         },
-        error:function (error) {
-            //Invokes if status code range is 500 range or 400 range
-            console.log("Error Method Invoked");
-            console.log(JSON.parse(error.responseText));
-            alert(JSON.parse(error.responseText).message);
+        error: function (rep) {
+            alert(rep.message);
         }
-    });
-});
+    })
+})
+
+
+
+
+//
+// signUp.addEventListener("click",() =>{
+//     let formData = $("#signUpForm").serialize();
+//     $.ajax({
+//         url:baseUrl+"Customer",
+//         method:"post",
+//         data:formData,
+//         dataType: "json",
+//         success:function (res) {
+//             //Invoked if the response status code is in 200 range
+//             console.log("Success Method Invoked");
+//             console.log(res);
+//             alert(res.message);
+//
+//         },
+//         error:function (error) {
+//             //Invokes if status code range is 500 range or 400 range
+//             console.log("Error Method Invoked");
+//             console.log(JSON.parse(error.responseText));
+//             alert(JSON.parse(error.responseText).message);
+//         }
+//     });
+// });
 
 // Function to extract the username from the URL query parameters
 // function getUsernameFromURL() {

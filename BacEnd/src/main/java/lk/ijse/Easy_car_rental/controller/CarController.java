@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+
 @RestController
 @RequestMapping("/Car")
 @CrossOrigin // will support to cors requests
@@ -20,8 +22,13 @@ public class CarController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public ResponseUtil saveCar(@ModelAttribute CarDTO dto ){
-        service.saveCar(dto);
-        return new ResponseUtil("OK","Successfully Registered..!",null);
+        try {
+            service.saveCar(dto);
+            return new ResponseUtil("Ok", "Successfully added...!", dto.getRegistrationNO());
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ResponseUtil("Error", "Failed to save Car", null);
+        }
     }
 
     @GetMapping

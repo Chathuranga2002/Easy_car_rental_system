@@ -7,6 +7,7 @@ import lk.ijse.Easy_car_rental.entity.Driver;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface DriverService {
     void getAdmin(DriverDTO dto);
@@ -18,5 +19,7 @@ public interface DriverService {
     void updateDriver(DriverDTO dto);
 
     ArrayList<DriverDTO> getAllDrivers();
+
+    List<DriverDTO> getRandomDriver();
 
 }

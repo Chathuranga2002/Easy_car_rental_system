@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Transactional
@@ -74,5 +75,12 @@ public class DriverServiceImpl  implements DriverService {
             throw new RuntimeException(" wrong username or password");
         }
     }
+
+    @Override
+    public List<DriverDTO> getRandomDriver() {
+        return mapper.map(repo.getRandomDriver(), new TypeToken<List<DriverDTO>>() {
+        }.getType());
+    }
+
 
 }

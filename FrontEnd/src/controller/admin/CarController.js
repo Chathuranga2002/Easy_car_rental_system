@@ -5,29 +5,46 @@ let selectedDriverForRent;
 /*Save Car*/
 $("#BtnSaveCar").click(function () {
 
-   let formData = $("#CarForm1").serialize();
+    let formData = new FormData($("#CarForm1")[0]);
+    formData.forEach((value, key) => {
+        console.log(key, value);
+    });
+    $.ajax({
+        url: baseUrl + "Car",
+        method: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (rep) {
+            alert(rep.message);
 
-   $.ajax({
-       url:baseUrl+"Car",
-       method:"post",
-       data:formData,
-       dataType: "json",
-       success:function (res) {
-           //Invoked if the response status code is in 200 range
-           console.log("Success Method Invoked");
-           console.log(res);
-           alert(res.message);
-           // getAllCars();
-       },
-       error:function (error) {
-           //Invokes if status code range is 500 range or 400 range
-           console.log("Error Method Invoked");
-           console.log(JSON.parse(error.responseText));
-           alert(JSON.parse(error.responseText).message);
-       }
-   });
-
+        },
+        error: function (rep) {
+            alert(rep.message);
+        }
+    });
 });
+   // $.ajax({
+   //     url:baseUrl+"Car",
+   //     method:"post",
+   //     data:formData,
+   //     dataType: "json",
+   //     success:function (res) {
+   //         //Invoked if the response status code is in 200 range
+   //         console.log("Success Method Invoked");
+   //         console.log(res);
+   //         alert(res.message);
+   //         // getAllCars();
+   //     },
+   //     error:function (error) {
+   //         //Invokes if status code range is 500 range or 400 range
+   //         console.log("Error Method Invoked");
+   //         console.log(JSON.parse(error.responseText));
+   //         alert(JSON.parse(error.responseText).message);
+   //     }
+   // });
+
+
 
 function getAllCarsId(code) {
     $("#cmbRegistrationNo").empty();

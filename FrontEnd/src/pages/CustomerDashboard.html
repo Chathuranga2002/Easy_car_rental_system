@@ -523,36 +523,30 @@
     </div>
 
 </div>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script>
     let selectedCustomer;
-    // function getUsernameFromURL() {
-    //     const urlParams = new URLSearchParams(window.location.search);
-    //     return urlParams.get("username");
-    // }
-    //
-    // const username = getUsernameFromURL();
-    // console.log(username)
-    // const usernameButton = document.getElementById("lblCusNIC");
-    // usernameButton.value = username;
-    //
-    // // Get the input element by its id
-    // var inputElement = document.getElementById("lblCusNIC");
-    //
-    // // Read the value of the input field
-    // var value = inputElement.value;
-    //
-    // // Use the 'value' variable for further processing or logging
-    // console.log("The value of the input field is: " + value);
+    function getUsernameFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get("username");
+    }
+
+    const username = getUsernameFromURL();
+    // searchCustomerById(username);
+    console.log(username);
+
 
 </script>
 
 
 <script src="../assets/js/nav/cusNav.js"></script>
-<script src="../assets/js/jquery-3.6.1.min.js"></script>
+
 <script src="../controller/Baseurl.js"></script>
 <script src="../controller/admin/CustomerController.js"></script>
 <script src="../controller/admin/CarController.js"></script>
 <script src="../controller/admin/RentCarController.js"></script>
+
+<script src="../assets/Sweet Alert/sweetalert.min.js"></script>
 
 <!-- ====== ionicons ======= -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
