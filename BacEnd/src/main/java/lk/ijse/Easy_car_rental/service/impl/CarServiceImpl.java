@@ -17,6 +17,7 @@ import javax.transaction.Transactional;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Transactional
@@ -70,9 +71,11 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public ArrayList<CarDTO> getAllDrivers() {
-        return mapper.map(repo.findAll(), new TypeToken<ArrayList<CarDTO>>() {
-        }.getType());
+    public ArrayList<Car> getAllDrivers() {
+        List<Car> all = repo.findAll();
+          return  new ArrayList<>(all);
+//        return mapper.map(repo.findAll(), new TypeToken<ArrayList<Car>>() {
+//        }.getType());
     }
 
 

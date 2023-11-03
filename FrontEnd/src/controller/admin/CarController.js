@@ -96,6 +96,21 @@ $(".regNO").click(function () {
                 if (regNO == carID) {
                     selectedCarForRent=c;
                     console.log(selectedCarForRent);
+                    let front_img = "../../../Easy_car_rental_system/BacEnd/src/main/resources/Car/"+c.frontViewImg;
+                    let side_img = "../../../Easy_car_rental_system/BacEnd/src/main/resources/Car/" + c.sideViewImg;
+                    let back_img = "../../../Easy_car_rental_system/BacEnd/src/main/resources/Car/" + c.backViewImg;
+                    let interior_img = "../../../Easy_car_rental_system/BacEnd/src/main/resources/Car/" + c.internalViewImg;
+
+                    var imgCarFrontView = $("#CarFrontView");
+                    var imgCarBackView = $("#CarBackView");
+                    var imgSideView = $("#CarSideView");
+                    var imgCarInteriorView = $("#CarInteriorView");
+
+                    imgCarFrontView.attr("src", front_img);
+                    imgCarBackView.attr("src", side_img);
+                    imgSideView.attr("src", back_img);
+                    imgCarInteriorView.attr("src", interior_img);
+
                     $("#txtCarBrand").val(c.brand);
                     $("#txtCarColor").val(c.color);
                     $("#txtCarFuel").val(c.fuelType);

@@ -1,6 +1,7 @@
 package lk.ijse.Easy_car_rental.service.impl;
 
 import lk.ijse.Easy_car_rental.dto.CustomerDTO;
+import lk.ijse.Easy_car_rental.entity.Car;
 import lk.ijse.Easy_car_rental.entity.Customer;
 import lk.ijse.Easy_car_rental.repo.CustomerRepo;
 import lk.ijse.Easy_car_rental.service.CustomerService;
@@ -14,6 +15,7 @@ import javax.transaction.Transactional;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Transactional
@@ -68,9 +70,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public ArrayList<CustomerDTO> getAllCustomer() {
-        return mapper.map(repo.findAll(), new TypeToken<ArrayList<CustomerDTO>>() {
-
-        }.getType());
+    public ArrayList<Customer> getAllCustomer() {
+        List<Customer> all = repo.findAll();
+        return  new ArrayList<>(all);
     }
 }

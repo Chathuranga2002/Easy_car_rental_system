@@ -7,9 +7,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public interface CarService  {
     public void saveCar(CarDTO dto) throws IOException;
 
-    ArrayList<CarDTO> getAllDrivers();
+    ArrayList<Car> getAllDrivers();
 }
