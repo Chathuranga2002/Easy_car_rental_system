@@ -360,9 +360,16 @@
                     </div>
                 </div>
                 <div class="col-2">
+                    <div class="mb-3">
+                        <label class="form-label mb-0" for="txtCustomerUserName">Username</label>
+                        <!--                            <input type="text" class="form-control" id="txtCustomerEmail" name="customerEmail" disabled="">-->
+                        <input class="form-control" id="txtCustomerUserName" name="userName" type="text">
+                    </div>
+                </div>
+                <div class="col-2">
                     <label class="form-label mb-0">NIC Image</label>
-                    <div class="mb-3" id="divNICFrontView" style="height: 13vh; border: #8800ff 2px solid">
-
+                    <div class="mb-3" id="divNICFrontView" style="height: 150px;object-fit: cover;overflow: hidden;  border: #8800ff 2px solid">
+                        <img id="NicImgView" src="" alt="" >
                     </div>
                 </div>
 
@@ -384,14 +391,15 @@
             </div>-->
             <!--                <div class="bg-light row overflow-scroll" style="height: 20vh">-->
             <div class="customerTable bg-light row overflow-scroll">
-                <table class="table table-hover table-bordered table-striped" id="CustomerTbl">
+                <table class="table table-hover table-bordered table-striped cusTable" id="CustomerTbl1" >
                     <thead class="bg-info">
                     <tr>
-                        <th>Customer Nic Id</th>
+                        <th>Customer NIC</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Tell</th>
-                        <th>NIC </th>
+                        <th>Username</th>
+                        <th>Address </th>
                         <th>Status</th>
                     </tr>
                     </thead>
@@ -721,7 +729,7 @@
 <!--<script src="../controller/admin/AdminController.js"></script>-->
 <script src="../controller/admin/DriverController.js"></script>
 <script src="../controller/admin/CarController.js"></script>
-
+<script src="../controller/admin/CustomerController.js"></script>
 
 <!-- ====== ionicons ======= -->
 <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>

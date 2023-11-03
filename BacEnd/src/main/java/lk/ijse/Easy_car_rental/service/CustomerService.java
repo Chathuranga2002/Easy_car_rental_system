@@ -9,6 +9,6 @@ import java.util.ArrayList;
 public interface CustomerService {
     void getAdmin(CustomerDTO dto);
     public void saveCustomer(CustomerDTO dto) throws IOException;
-    CustomerDTO searchCustomer(String customerId);
+    Customer searchCustomer(String customerId);
     ArrayList<Customer> getAllCustomer();
 }
