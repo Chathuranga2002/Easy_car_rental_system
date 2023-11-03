@@ -1,14 +1,18 @@
 package lk.ijse.Easy_car_rental.service.impl;
 
 import lk.ijse.Easy_car_rental.dto.CarDTO;
+import lk.ijse.Easy_car_rental.dto.DriverDTO;
 import lk.ijse.Easy_car_rental.entity.Car;
+import lk.ijse.Easy_car_rental.entity.Driver;
 import lk.ijse.Easy_car_rental.repo.CarRepo;
 import lk.ijse.Easy_car_rental.service.CarService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 
 @Service
 @Transactional
@@ -30,15 +34,14 @@ public class CarServiceImpl implements CarService {
         repo.save(mapper.map(dto, Car.class));
     }
 
+    @Override
+    public ArrayList<CarDTO> getAllDrivers() {
+        return mapper.map(repo.findAll(), new TypeToken<ArrayList<CarDTO>>() {
+        }.getType());
+    }
 
 
 
-//    @Override
-//    public void saveCar(Car dto) {
-//        if (repo.existsById(dto.getRegistrationNO())){
-//            throw new RuntimeException(dto.getRegistrationNO()+ " : Item already registered.!");
-//        }
-//        repo.save(dto);
 
 
 }

@@ -196,13 +196,7 @@
         <div class="bookingRequestBox" id="BookingRequestF">  <!--Booking Request  seen open-->
             <h1 >Booking Request</h1>
 
-            <div class="row ml-0 mr-0 mt-2 mb-2 align-content-end ">
-                <div class="cIDlbl input-group d-flex align-items-center justify-content-center">
-                    <div class="col-2">
-                        <input type="text" class="form-control" id="txtCustId" name="customerId" disabled="">
-                    </div>
-                </div>
-            </div>
+
 
             <h3 class="CandDrDTopic1 h3  p-2 bg-success text-white">Car and Driver Details</h3>
             <div class="bookingRequestDetails row p-3">
@@ -210,14 +204,15 @@
                     <label for="cmbType" class="form-label mb-0">Car Type</label>
                     <select class="form-select" aria-label="Default select example" id="cmbType" name="type">
                         <option selected="">- Select Car Type -</option>
-                        <option value="1">General</option>
-                        <option value="2">Premium</option>
-                        <option value="3">Luxury</option>
+                        <option value="General">General</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Luxury">Luxury</option>
                     </select>
                 </div>
                 <div class="col-2">
                     <label for="cmbRegistrationNo" class="form-label mb-0">Car Registration No</label>
-                    <select class="form-select" aria-label="Default select example" id="cmbRegistrationNo" name="type">
+                    <select class="form-select regNO" aria-label="Default select example"  id="cmbRegistrationNo" name="registrationNo">
+                        <option value="non">Select One</option>
                     </select>
                 </div>
                 <div class="col-2">
@@ -265,20 +260,14 @@
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
-                        <label for="txtCarFreeKmForPrice" class="form-label mb-0">Free Km For Price (Km)</label>
-                        <input type="text" class="form-control" id="txtCarFreeKmForPrice" name="carFreeKmForPrice" disabled="">
+                        <label for="txtCarFreeKmForMonth" class="form-label mb-0">Free Km For Month (Km)</label>
+                        <input type="text" class="form-control" id="txtCarFreeKmForMonth" name="carFreeKmForPrice" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
-                        <label for="txtCarFreeKmForDuration" class="form-label mb-0">Free Km For Duration (Km)</label>
-                        <input type="text" class="form-control" id="txtCarFreeKmForDuration" name="carFreeKmForDuration" disabled="">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="mb-3">
-                        <label for="txtCarLossDamageWavier" class="form-label mb-0">Loss Damage Wavier (Rs.)</label>
-                        <input type="text" class="form-control" id="txtCarLossDamageWavier" name="carLossDamageWavier" disabled="">
+                        <label for="txtCarFreeKmForDay" class="form-label mb-0">Free Km For Day (Km)</label>
+                        <input type="text" class="form-control" id="txtCarFreeKmForDay" name="carFreeKmForDuration" disabled="">
                     </div>
                 </div>
 
@@ -288,12 +277,7 @@
                         <input type="text" class="form-control" id="txtCarPriceForExtraKm" name="carPriceForExtraKm" disabled="">
                     </div>
                 </div>
-                <div class="col-2">
-                    <div class="mb-3">
-                        <label for="txtCarCompleteKm" class="form-label mb-0">Complete Km</label>
-                        <input type="text" class="form-control" id="txtCarCompleteKm" name="carCompleteKm" disabled="">
-                    </div>
-                </div>
+
                 <div class="col-2">
                     <label class="form-label mb-0">Car Front View</label>
                     <div class="mb-3" id="divCarFrontView" style="height: 13vh; border: #00e5ff 2px solid">
@@ -347,7 +331,13 @@
                 </div>
                 <div class="col-3">
                     <div class="mb-3">
-                        <label for="txtPaymentAmount" class="form-label mb-0">How many days/month ? (Rs.)</label>
+                        <label for="txtPaymentAmount" class="form-label mb-0">Advanced Amount (Rs.)</label>
+                        <input type="text" class="form-control" id="txtPaymentAmount" name="paymentAmount">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="mb-3">
+                        <label for="txtRantDayCount" class="form-label mb-0">How many days/month ? (Rs.)</label>
                         <input type="text" class="form-control" id="txtRantDayCount" name="txtRantDayCount">
                     </div>
                 </div>
@@ -356,6 +346,15 @@
                     <input class="form-check-input" type="checkbox" value="yes" id="needDriver">
                 </div>
 
+
+
+
+            </div>
+
+
+            <br>
+            <h3 class="CandDrDTopic3 h3  p-2 bg-success text-white">Driver Details</h3>
+            <div class="bookingRequestDetails3 row p-3">
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtDriverLicenceNo" class="form-label mb-0">Driver Licence No</label>
@@ -382,25 +381,6 @@
                     </div>
                 </div>
 
-
-            </div>
-
-
-            <br>
-            <h3 class="CandDrDTopic3 h3  p-2 bg-success text-white">Payment Details</h3>
-            <div class="bookingRequestDetails3 row p-3">
-                <div class="col-3">
-                    <div class="mb-3">
-                        <label for="txtPaymentId" class="form-label mb-0">Payment ID</label>
-                        <input type="text" class="form-control" id="txtPaymentId" name="paymentId" disabled="">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="mb-3">
-                        <label for="txtPaymentAmount" class="form-label mb-0">Advanced Amount (Rs.)</label>
-                        <input type="text" class="form-control" id="txtPaymentAmount" name="paymentAmount">
-                    </div>
-                </div>
             </div>
             <!--Buttons-->
             <br>
@@ -544,24 +524,25 @@
 
 </div>
 <script>
-    function getUsernameFromURL() {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get("username");
-    }
-
-    const username = getUsernameFromURL();
-    console.log(username)
-    const usernameButton = document.getElementById("lblCusNIC");
-    usernameButton.value = username;
-
-    // Get the input element by its id
-    var inputElement = document.getElementById("lblCusNIC");
-
-    // Read the value of the input field
-    var value = inputElement.value;
-
-    // Use the 'value' variable for further processing or logging
-    console.log("The value of the input field is: " + value);
+    let selectedCustomer;
+    // function getUsernameFromURL() {
+    //     const urlParams = new URLSearchParams(window.location.search);
+    //     return urlParams.get("username");
+    // }
+    //
+    // const username = getUsernameFromURL();
+    // console.log(username)
+    // const usernameButton = document.getElementById("lblCusNIC");
+    // usernameButton.value = username;
+    //
+    // // Get the input element by its id
+    // var inputElement = document.getElementById("lblCusNIC");
+    //
+    // // Read the value of the input field
+    // var value = inputElement.value;
+    //
+    // // Use the 'value' variable for further processing or logging
+    // console.log("The value of the input field is: " + value);
 
 </script>
 
@@ -570,6 +551,8 @@
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script src="../controller/Baseurl.js"></script>
 <script src="../controller/admin/CustomerController.js"></script>
+<script src="../controller/admin/CarController.js"></script>
+<script src="../controller/admin/RentCarController.js"></script>
 
 <!-- ====== ionicons ======= -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

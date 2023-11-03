@@ -101,7 +101,7 @@ signUp.addEventListener("click",() =>{
             console.log("Success Method Invoked");
             console.log(res);
             alert(res.message);
-            getAllCars();
+
         },
         error:function (error) {
             //Invokes if status code range is 500 range or 400 range
