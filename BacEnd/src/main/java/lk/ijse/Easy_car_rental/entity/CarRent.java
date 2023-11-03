@@ -19,7 +19,7 @@ public class CarRent {
     private String pickUpDate;
     private int dayCount;
     private double advance;
-
+    private String status;
     @ManyToOne( cascade = CascadeType.ALL)
     @JoinColumn(name = "nicNo", referencedColumnName = "nicNo")
     private Customer customer;

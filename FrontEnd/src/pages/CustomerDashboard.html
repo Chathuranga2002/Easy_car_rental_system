@@ -88,75 +88,58 @@
 
         <div class="myProfileBox" id="ProfileF">  <!--My Profile  seen open-->
             <h1 >My Profile</h1>
-            <h3 class="dtTopic1 h3  p-2 m-3 bg-success text-white">Upload NIC Image For Verify</h3>
-            <div class="myProfileDetails row p-3">
-                <div class="mb-3  custom1">
-                    <label for="formFile" class="form-label custom2">Nic Image</label>
-                    <input class="form-control custom3" type="file" id="formFile">
-                </div>
-
-                <div class="myProfileBtn row m-3">
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                        <button type="button" class="btn btn-warning mt-3 " id="btnUploadNic">Update</button>
-
-                    </div>
-                </div>
-
-            </div>
-            <br><br>
+            <br>
             <h3 class="dtTopic1 h3  p-2 m-3 bg-success text-white">My Personal Details</h3>
-            <div class="myProfileDetails row p-3">
+            <form action="">
+                <div class="myProfileDetails row p-3">
 
                 <div class="col-3">
                     <div class="mb-3">
-                        <label for="txtCusId" class="form-label mb-0">Customer ID</label>
-                        <input type="text" class="form-control" id="txtCusId" name="cusId" disabled="">
+                        <label for="txtNicId" class="form-label mb-0">My Nic</label>
+                        <input type="text" class="form-control" id="txtNicId" name="nicNo" disabled="">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="mb-3">
                         <label for="txtCusName" class="form-label mb-0">Name</label>
-                        <input type="text" class="form-control" id="txtCusName" name="cusName">
+                        <input type="text" class="form-control" id="txtCusName" name="name">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="mb-3">
                         <label for="txtCusAddress" class="form-label mb-0">Address</label>
-                        <input type="text" class="form-control" id="txtCusAddress" name="cusAddress">
+                        <input type="text" class="form-control" id="txtCusAddress" name="address">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="mb-3">
                         <label for="txtCusEmail" class="form-label mb-0">E-mail</label>
-                        <input type="text" class="form-control" id="txtCusEmail" name="cusEmail">
+                        <input type="text" class="form-control" id="txtCusEmail" name="email">
                     </div>
                 </div>
 
                 <div class="col-3">
                     <div class="mb-3">
                         <label for="txtCusContactNo" class="form-label mb-0">Contact No</label>
-                        <input type="text" class="form-control" id="txtCusContactNo" name="cusContactNo">
+                        <input type="text" class="form-control" id="txtCusContactNo" name="contactNo">
                     </div>
                 </div>
+
                 <div class="col-3">
                     <div class="mb-3">
-                        <label for="txtCusNIC" class="form-label mb-0">NIC</label>
-                        <input type="text" class="form-control" id="txtCusNIC" name="cusNIC">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="mb-3">
-                        <label for="txtCusLicenceNo" class="form-label mb-0">Password</label>
-                        <input type="password" class="form-control" id="txtCusLicenceNo" name="cusLicenceNo">
+                        <label for="txtPassword" class="form-label mb-0">Password</label>
+                        <input type="password" class="form-control" id="txtPassword" name="password">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="mb-3">
                         <label for="txtCusUsername" class="form-label mb-0">Username</label>
-                        <input type="text" class="form-control" id="txtCusUsername" name="cusUsername" disabled="">
+                        <input type="text" class="form-control" id="txtCusUsername" name="username" disabled="">
                     </div>
                 </div>
+
             </div>
+            </form>
                 <!--===Buttons-->
                 <div class="myProfileBtn row m-3">
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
@@ -341,10 +324,13 @@
                         <input type="text" class="form-control" id="txtRantDayCount" name="txtRantDayCount">
                     </div>
                 </div>
-                <div class="col-3 d-flex align-items-center justify-content-center">
-                    <label class="form-check-label pr-5" for="needDriver">Need a driver? </label>
-                    <input class="form-check-input" type="checkbox" value="yes" id="needDriver">
+                <div class="col-3">
+                    <div class="mb-3">
+                        <label for="txtRantStatus" class="form-label mb-0">Rent Status</label>
+                        <input type="text" value="Pending" class="form-control" id="txtRantStatus" name="txtRantDayCount" disabled="">
+                    </div>
                 </div>
+
 
 
 
@@ -355,6 +341,10 @@
             <br>
             <h3 class="CandDrDTopic3 h3  p-2 bg-success text-white">Driver Details</h3>
             <div class="bookingRequestDetails3 row p-3">
+                <div class="col-3 d-flex align-items-center justify-content-center">
+                    <label class="form-check-label pr-5" for="needDriver">Need a driver? </label>
+                    <input class="form-check-input" type="checkbox" value="yes" id="needDriver">
+                </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtDriverLicenceNo" class="form-label mb-0">Driver Licence No</label>
@@ -408,64 +398,40 @@
             <h1 >Booking Responses</h1>
 
 <!--            <div class="bookingResponseTable row overflow-scroll" style="height: 25vh">-->
-            <div class="bookingResponseTable row overflow-scroll" >
-                <table class="table table-hover table-bordered table-striped" id="bookingResponsesTbl">
-                    <thead class="bg-info">
-                    <tr>
-                        <th>Rent ID</th>
-                        <th>Date</th>
-                        <th>Pickup Date</th>
-                        <th>Return Date</th>
-                        <th>Registration No</th>
-                        <th>Customer ID</th>
-                        <th>Licence No</th>
-                        <th>Status</th>
-                    </tr>
-                    </thead>
-                    <tbody id="bookingResponsesTable">
 
-                    </tbody>
-                </table>
-            </div>
 
-            <hr>
             <br>
 
             <div class="bookingResponsesDetails">
+
                 <div class="col-2">
-                    <div class="mb-3">
-                        <label for="txtRentId" class="form-label mb-0">Rent ID</label>
-                        <input type="text" class="form-control" id="txtRentId" name="rentId" disabled="">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="mb-3">
-                        <label for="txtDate" class="form-label mb-0">Date</label>
-                        <input type="text" class="form-control" id="txtDate" name="date" disabled="">
-                    </div>
+                    <label for="CombRentId" class="form-label mb-0">Rent Id</label>
+                    <select class="form-select regNO" aria-label="Default select example"  id="CombRentId" name="rentId">
+                        <option value="non">Select One</option>
+                    </select>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtPickupDate" class="form-label mb-0">Pickup Date</label>
-                        <input type="text" class="form-control" id="txtPickupDate" name="pickupDate" disabled="">
+                        <input type="text" class="form-control" id="txtPickupDate" name="pickUpDate" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
-                        <label for="txtReturnDate" class="form-label mb-0">Return Date</label>
-                        <input type="text" class="form-control" id="txtReturnDate" name="returnDate" disabled="">
+                        <label for="txtDayCount" class="form-label mb-0">Rent Type</label>
+                        <input type="text" class="form-control" id="txtType" name="rentType" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
-                        <label for="txtRegistrationNo" class="form-label mb-0">Registration No</label>
-                        <input type="text" class="form-control" id="txtRegistrationNo" name="registrationNo" disabled="">
+                        <label for="txtDayCount" class="form-label mb-0">Day Or Month Count</label>
+                        <input type="text" class="form-control" id="txtDayCount" name="dayCount" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
-                        <label for="txtLicenceNo" class="form-label mb-0">Licence No</label>
-                        <input type="text" class="form-control" id="txtLicenceNo" name="licenceNo" disabled="">
+                        <label for="txtStatus" class="form-label mb-0">status</label>
+                        <input type="text" class="form-control" id="txtStatus" name="status" disabled="">
                     </div>
                 </div>
             </div>
@@ -533,7 +499,9 @@
 
     const username = getUsernameFromURL();
     // searchCustomerById(username);
+
     console.log(username);
+
 
 
 </script>

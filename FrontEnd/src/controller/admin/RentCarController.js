@@ -13,13 +13,21 @@ function searchCustomerById(username) {
         success: function (res) {
             let customer = res.data;
             console.log(customer);
-            customerDetails=customer;
+            lodeCustomerToText(customer);
 
 
         }
     });
 }
-
+function lodeCustomerToText(customer) {
+    $('#txtNicId').val(customer.nicNo);
+    $('#txtCusName').val(customer.name);
+    $('#txtCusAddress').val(customer.address);
+    $('#txtCusContactNo').val(customer.contactNo);
+    $('#txtCusUsername').val(customer.username);
+    $('#txtPassword').val(customer.password);
+    $('#txtCusEmail').val(customer.email);
+}
 
 
 

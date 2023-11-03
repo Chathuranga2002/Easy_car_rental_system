@@ -43,4 +43,11 @@ public class CustomerController {
     public ResponseUtil searchCustomer(@PathVariable String id) {
         return new ResponseUtil("200", "Ok", service.searchCustomer(id));
     }
+
+    @GetMapping
+    public ResponseUtil getAllCustomer() {
+        return new ResponseUtil("OK", "Successfully Loaded. : ", service.getAllCustomer());
+
+    }
+
 }
