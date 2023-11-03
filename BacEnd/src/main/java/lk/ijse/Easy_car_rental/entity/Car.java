@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 
@@ -23,6 +24,7 @@ public class Car {
     private String fuelType;
     private String color;
     private double completeKm;
+
     private String status;
 
     private String frontViewImg;

@@ -74,4 +74,16 @@ public class CustomerServiceImpl implements CustomerService {
         List<Customer> all = repo.findAll();
         return  new ArrayList<>(all);
     }
+
+    @Override
+    public void updateCustomer(CustomerDTO dto) {
+        if (repo.existsById(dto.getNicNo())) {
+            repo.updateCustomer(dto.getNicNo(),dto.getName(),dto.getAddress(),dto.getEmail(),dto.getContactNo(),dto.getPassword());
+        } else {
+            throw new RuntimeException("No Such Customer To Update");
+        }
+    }
+
+
+
 }

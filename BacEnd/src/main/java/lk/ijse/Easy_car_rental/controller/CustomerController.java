@@ -50,4 +50,10 @@ public class CustomerController {
 
     }
 
+    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto) {
+        service.updateCustomer(dto);
+        return new ResponseUtil("200", "Updated", null);
+    }
+
 }

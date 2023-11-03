@@ -11,4 +11,5 @@ public interface CustomerService {
     public void saveCustomer(CustomerDTO dto) throws IOException;
     Customer searchCustomer(String customerId);
     ArrayList<Customer> getAllCustomer();
+    void updateCustomer(CustomerDTO dto);
 }

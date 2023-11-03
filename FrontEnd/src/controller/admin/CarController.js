@@ -54,9 +54,17 @@ function getAllCarsId(code) {
             for (let c of res.data) {
                 let carType=c.type;
                 let carID=c.registrationNO;
+                let stutus=c.status;
+                // if (code == carType) {
+                //     // $("#cmbRegistrationNo").append(`<option value="${carID}">${carID}</option>`);
+                //  }
                 if (code == carType) {
-                    $("#cmbRegistrationNo").append(`<option value="${carID}">${carID}</option>`);
+                    if (stutus !== "rent" || stutus !== "maintain") {
+                        // Your additional logic here
+                        $("#cmbRegistrationNo").append(`<option value="${carID}">${carID}</option>`);
+                    }
                 }
+
 
 
 
