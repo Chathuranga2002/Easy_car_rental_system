@@ -12,4 +12,5 @@ public interface CustomerService {
     Customer searchCustomer(String customerId);
     ArrayList<Customer> getAllCustomer();
     void updateCustomer(CustomerDTO dto);
+    void updateCasStatus(String nicNo, String status);
 }

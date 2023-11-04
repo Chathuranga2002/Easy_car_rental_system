@@ -8,7 +8,7 @@
     <title>Admin Dashboard</title>
     <!-- ======= Styles ====== -->
     <link href="../assets/css/custom/dashboard.css" rel="stylesheet">
-
+    <script src="../assets/Sweet Alert/sweetalert.min.js"></script>
 
 
 </head>
@@ -526,11 +526,12 @@
                     <thead class="bg-info">
                     <tr>
                         <th>Car Rent ID</th>
-                        <th>Customer ID</th>
-                        <th>Driver ID</th>
+                        <th>Customer NIC</th>
+                        <th>Driver NIC</th>
                         <th>Registration ID</th>
                         <th>Start Date</th>
-                        <th>End Date</th>
+                        <th>Rent Type</th>
+                        <th>Day Count </th>
                     </tr>
                     </thead>
                     <tbody id="tblCarRentals"></tbody>
@@ -544,28 +545,23 @@
         <!--==============Payments Page Open===============================================================-->
         <div class="customerBox" id="PaymentF">  <!--Payments  seen open-->
             <h1>Payments</h1>
+            <form action="">
             <div class="customerDetails sectionClass">
                 <div class="col-2">
                     <div class="mb-3">
-                        <label class="form-label mb-0">RentID</label>
-                        <!--                            <input type="text" class="form-control" id="txtCustomerId" name="customerId" disabled="">-->
-                        <input class="form-control" id="txtPaymentRentId" name="Id" type="text">
+                        <label class="form-label mb-0">Rent Id</label>
+                        <!--                            <input type="text" class="form-control" id="txtCustomerName" name="customerName" disabled="">-->
+                        <input class="form-control" id="txtRentId" name="rentId" type="text" >
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label class="form-label mb-0">Advance</label>
                         <!--                            <input type="text" class="form-control" id="txtCustomerName" name="customerName" disabled="">-->
-                        <input class="form-control" id="txtPaymentAdvance" name="Date" type="text" disabled="">
+                        <input class="form-control" id="txtPaymentAdvance" name="Date" type="text"readonly>
                     </div>
                 </div>
-                <div class="col-2">
-                    <div class="mb-3">
-                        <label class="form-label mb-0">Customer NIC</label>
-                        <!--                            <input type="text" class="form-control" id="txtCustomerName" name="customerName" disabled="">-->
-                        <input class="form-control" id="txtPaymentCusId" name="Date" type="text" disabled="">
-                    </div>
-                </div>
+
                 <div class="col-2">
                     <div class="mb-3">
                         <label class="form-label mb-0">Damage</label>
@@ -610,6 +606,7 @@
                 </div>
 
             </div>
+            </form>
             <div class="customerButtons col-4">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                     <button class="btn btn-success mt-3" id="btnAcceptPayment" type="button">Pay</button>
@@ -732,11 +729,11 @@
 <script src="../controller/admin/DriverController.js"></script>
 <script src="../controller/admin/CarController.js"></script>
 <script src="../controller/admin/CustomerController.js"></script>
+<script src="../controller/admin/AdminControler2.js"></script>
 
 <!-- ====== ionicons ======= -->
 <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 
 <script src="../assets/js/bootsrap/bootstrap.min.js"></script>
 

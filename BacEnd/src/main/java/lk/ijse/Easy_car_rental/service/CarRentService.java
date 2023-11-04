@@ -12,4 +12,5 @@ public interface CarRentService  {
     CarRent searchCarRent(String rentId);
     void deleteCarRent(String rentId);
     void updateCarRentStatus(String rentId, String status);
+    ArrayList<CarRent> getAllCarRents();
 }

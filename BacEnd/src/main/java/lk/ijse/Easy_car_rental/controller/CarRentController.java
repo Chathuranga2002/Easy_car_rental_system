@@ -70,4 +70,8 @@ public class CarRentController {
         service.updateCarRentStatus(rentId, status);
         return new ResponseUtil("200", "Ok", null);
     }
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllCarRents() {
+        return new ResponseUtil("200", "Ok", service.getAllCarRents());
+    }
 }

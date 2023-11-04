@@ -15,7 +15,7 @@ $("#btnSaveDrivers").click(function () {
             console.log("Success Method Invoked");
             console.log(res);
             alert(res.message);
-            // getAllCars();
+            getAllDrivers();
         },
         error:function (error) {
             //Invokes if status code range is 500 range or 400 range

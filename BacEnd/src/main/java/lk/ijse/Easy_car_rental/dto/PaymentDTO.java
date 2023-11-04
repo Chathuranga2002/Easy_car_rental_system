@@ -14,7 +14,7 @@ import javax.persistence.Id;
 @ToString
 public class PaymentDTO {
     private String rentId;
-    private String nicNo;;
+//    private String nicNo;;
     private double advance;
     private double timeCost;
     private double extraKm;

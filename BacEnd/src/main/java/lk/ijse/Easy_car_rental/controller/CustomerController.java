@@ -59,5 +59,10 @@ public class CustomerController {
         service.updateCustomer(dto);
         return new ResponseUtil("200", "Updated", null);
     }
+    @PutMapping(path = "/{nicNo}/{status}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil updateCusStatus(@PathVariable String nicNo, @PathVariable String status) {
+        service.updateCasStatus(nicNo, status);
+        return new ResponseUtil("200", "Ok", null);
+    }
 
 }

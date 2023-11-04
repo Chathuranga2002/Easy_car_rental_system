@@ -15,7 +15,7 @@ import javax.persistence.*;
 public class Payment {
     @Id
     private String rentId;
-    private String nicNo;;
+//    private String nicNo;;
     private double advance;
     private double timeCost;
     private double extraKm;

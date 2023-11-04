@@ -83,7 +83,14 @@ public class CustomerServiceImpl implements CustomerService {
             throw new RuntimeException("No Such Customer To Update");
         }
     }
-
+    @Override
+    public void updateCasStatus(String nicNo, String status) {
+        if (repo.existsById(nicNo)) {
+            repo.updateCarRentStatus(nicNo, status);
+        } else {
+            throw new RuntimeException("No Such Custmer To Update");
+        }
+    }
 
 
 }

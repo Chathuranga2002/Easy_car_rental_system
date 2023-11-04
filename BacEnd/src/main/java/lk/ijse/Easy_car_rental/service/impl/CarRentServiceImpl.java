@@ -6,6 +6,7 @@ import lk.ijse.Easy_car_rental.repo.CarRepo;
 import lk.ijse.Easy_car_rental.repo.DriverRepo;
 import lk.ijse.Easy_car_rental.service.CarRentService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -105,4 +106,12 @@ public class CarRentServiceImpl implements CarRentService {
             throw new RuntimeException("No Such CarRent To Update");
         }
     }
+    @Override
+    public ArrayList<CarRent> getAllCarRents() {
+        return mapper.map(repo.findAll(), new TypeToken<List<CarRent>>() {
+        }.getType());
+    }
+
+
+
 }
