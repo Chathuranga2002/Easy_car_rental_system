@@ -14,6 +14,7 @@ public class CarRentDTO {
     private String rentType;
     private String pickUpDate;
     private int dayCount;
+    private double advance;
     private String status;
     private CustomerDTO customer;
     private CarDTO car;

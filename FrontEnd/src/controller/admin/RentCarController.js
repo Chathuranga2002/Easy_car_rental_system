@@ -83,6 +83,11 @@ function searchRandomDriverForRent() {
     })
 }
 
+
+
+
+
+
 function clearRentalDriverFields() {
     $('#txtDriverLicenceNo').val("");
     $('#txtDriverName').val("");

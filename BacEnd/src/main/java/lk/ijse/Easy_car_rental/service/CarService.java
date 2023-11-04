@@ -13,4 +13,8 @@ public interface CarService  {
     public void saveCar(CarDTO dto) throws IOException;
 
     ArrayList<Car> getAllDrivers();
+
+    void updateCarStatus(String registrationNO, String status);
+    Car searchCar(String registrationNO);
+
 }

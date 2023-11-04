@@ -22,4 +22,6 @@ public interface DriverService {
 
     List<DriverDTO> getRandomDriver();
 
+    DriverDTO searchDriver(String licenceNo);
+
 }

@@ -42,5 +42,9 @@ public class DriverControllor {
         return new ResponseUtil("200","Ok",service.getRandomDriver());
     }
 
+    @GetMapping(path = "/{licenceNo}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil searchDriver(@PathVariable String licenceNo) {
+        return new ResponseUtil("200", "Ok", service.searchDriver(licenceNo));
+    }
 
 }

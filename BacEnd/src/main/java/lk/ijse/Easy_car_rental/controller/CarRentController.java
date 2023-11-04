@@ -2,6 +2,7 @@ package lk.ijse.Easy_car_rental.controller;
 
 import lk.ijse.Easy_car_rental.dto.CarRentDTO;
 import lk.ijse.Easy_car_rental.dto.CustomerDTO;
+import lk.ijse.Easy_car_rental.entity.CarRent;
 import lk.ijse.Easy_car_rental.service.CarRentService;
 import lk.ijse.Easy_car_rental.service.CarService;
 import lk.ijse.Easy_car_rental.service.CustomerService;
@@ -10,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/CarRent")
@@ -24,10 +27,21 @@ public class CarRentController {
         return new ResponseUtil("ok", "Ok", service.generateRentId());
     }
 
-    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public ResponseUtil saveCustomer(@ModelAttribute CarRentDTO dto ){
-        service.saveCarRent(dto);
-        return new ResponseUtil("OK","Successfully Registered..!",null);
+    public ResponseUtil saveCarRent(@RequestBody CarRent dto ){
+        try {
+            System.out.println(dto.getRentId());
+            System.out.println(dto.getCar().getRegistrationNO());
+            System.out.println(dto.getDriver().getNic());
+            System.out.println(dto.getCustomer().getNicNo());
+            service.saveCarRent(dto);
+            return new ResponseUtil("Ok", "Successfully added...!", dto.getRentId());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseUtil("Error", "Failed to save customer", null);
+        }
+
+
     }
+
 }

@@ -79,7 +79,19 @@ public class CarServiceImpl implements CarService {
     }
 
 
+    @Override
+    public void updateCarStatus(String registrationNO, String status) {
+        if (repo.existsById(registrationNO)) {
+            repo.updateCarStatus(status, registrationNO);
+        } else {
+            throw new RuntimeException("No Such Car To Update");
+        }
+    }
 
+    @Override
+    public Car searchCar(String registrationNO) {
+        return mapper.map(repo.findById(registrationNO).get(), Car.class);
+    }
 
 
 }

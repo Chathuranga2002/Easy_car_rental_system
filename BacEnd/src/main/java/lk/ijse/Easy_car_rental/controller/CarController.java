@@ -6,6 +6,7 @@ import lk.ijse.Easy_car_rental.service.CarService;
 import lk.ijse.Easy_car_rental.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -37,7 +38,14 @@ public class CarController {
 
     }
 
+    @PutMapping(path = "/updateCarStatus/{registrationNO}/{status}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil updateCarStatus(@PathVariable String registrationNO, @PathVariable String status) {
+        service.updateCarStatus(registrationNO, status);
+        return new ResponseUtil("200", "Ok", null);
+    }
 
-
-
+    @GetMapping(path = "/{registrationNo}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil searchCar(@PathVariable String registrationNo) {
+        return new ResponseUtil("200", "Ok", service.searchCar(registrationNo));
+    }
 }

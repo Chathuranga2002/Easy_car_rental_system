@@ -82,5 +82,13 @@ public class DriverServiceImpl  implements DriverService {
         }.getType());
     }
 
+    @Override
+    public DriverDTO searchDriver(String licenceNo) {
+        if (repo.existsById(licenceNo)) {
+            return mapper.map(repo.findById(licenceNo).get(), DriverDTO.class);
+        } else {
+            throw new RuntimeException("Driver Not Found...");
+        }
+    }
 
 }

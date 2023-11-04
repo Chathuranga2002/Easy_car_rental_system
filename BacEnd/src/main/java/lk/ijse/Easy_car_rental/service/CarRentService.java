@@ -7,5 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CarRentService  {
     String generateRentId();
-    void saveCarRent(CarRentDTO dto);
+    void saveCarRent(CarRent dto);
+
 }

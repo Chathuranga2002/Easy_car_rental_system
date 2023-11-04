@@ -6,6 +6,7 @@ import lk.ijse.Easy_car_rental.entity.Car;
 import lk.ijse.Easy_car_rental.entity.CarRent;
 import lk.ijse.Easy_car_rental.repo.CarRentRepo;
 import lk.ijse.Easy_car_rental.repo.CarRepo;
+import lk.ijse.Easy_car_rental.repo.DriverRepo;
 import lk.ijse.Easy_car_rental.service.CarRentService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,10 @@ public class CarRentServiceImpl implements CarRentService {
 
     @Autowired
     private CarRentRepo repo;
+    @Autowired
+    private DriverRepo drRepo;
+    @Autowired
+    private CarRepo carRepo;
 
     @Override
     public String generateRentId() {
@@ -46,12 +51,20 @@ public class CarRentServiceImpl implements CarRentService {
     }
 
     @Override
-    public void saveCarRent(CarRentDTO dto) {
+    public void saveCarRent(CarRent dto) {
+        // carrent save
         if (repo.existsById(dto.getRentId())){
             throw new RuntimeException("Car already Exists.. Please enter another ID..");
         }
-        repo.save(mapper.map(dto, CarRent.class));
+        repo.save(dto);
+        System.out.println("err 1");
+        //  set car status rent
 
+        carRepo.updateCarStatus("rent",dto.getCar().getRegistrationNO());
+        System.out.println("err 2");
+//          set driver status false
+        drRepo.updateDriverNonAvailable(dto.getDriver().getNic());
+        System.out.println("err 3");
 
     }
 
