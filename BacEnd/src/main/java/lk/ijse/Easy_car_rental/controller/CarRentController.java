@@ -41,7 +41,6 @@ public class CarRentController {
             return new ResponseUtil("Error", "Failed to save customer", null);
         }
 
-
     }
 
 }

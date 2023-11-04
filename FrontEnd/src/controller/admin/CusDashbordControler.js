@@ -158,25 +158,25 @@ function addCarRent(customer, car, driver) {
         dataType: "json",
         contentType: "application/json",
         success: function (rep) {
-            alert(rep.message);
-            // swal({
-            //     title: "Confirmation",
-            //     text: "Rental Request send successfully",
-            //     icon: "success",
-            //     button: "Close",
-            //     timer: 2000
-            // });
+
+            swal({
+                title: "Confirmation",
+                text: "Rental Request send successfully",
+                icon: "success",
+                button: "Close",
+                timer: 2000
+            });
         },
         error: function (ob) {
 
             alert(ob.message);
-            // swal({
-            //     title: "Error",
-            //     text: "Error Occured.Please Try Again.",
-            //     icon: "error",
-            //     button: "Close",
-            //     timer: 2000
-            // });
+            swal({
+                title: "Error",
+                text: "Error Occured.Please Try Again.",
+                icon: "error",
+                button: "Close",
+                timer: 2000
+            });
         }
     })
 }

@@ -30,13 +30,31 @@ login.addEventListener("click",() =>{
             data: "",
             dataType: "",
             success: function (res) {
-                profileLink.href = `../pages/adminDashboard.html?username=${username}`;
-                document.getElementById("profileLink").click();
+               if (res.message=="true"){
+                   profileLink.href = `../pages/adminDashboard.html?username=${username}`;
+                   document.getElementById("profileLink").click();
+                   swal({
+                       title: "Confirmation",
+                       text: "Login successfully",
+                       icon: "success",
+                       button: "Close",
+                       timer: 2000
+                   });
+               }else {
+                   refresh();
+                   swal({
+                       title: "error",
+                       text: "Invalid Username Or Password",
+                       icon: "error",
+                       button: "Close",
+                       timer: 2000
+                   });
 
-                alert(res.message);
+               }
+
             },
-            error: function (error) {
-                alert(res.message);
+            error: function (ob) {
+
             }
         });
 
@@ -52,13 +70,30 @@ login.addEventListener("click",() =>{
             data: "",
             dataType: "",
             success: function (res) {
+                if (res.message=="true"){
                 profileLink.href = `../pages/CustomerDashboard.html?username=${username}`;
                 document.getElementById("profileLink").click();
+                    swal({
+                        title: "Confirmation",
+                        text: "Login  successfully",
+                        icon: "success",
+                        button: "Close",
+                        timer: 2000
+                    });
+                }else {
+                    refresh();
+                    swal({
+                        title: "error",
+                        text: "Invalid Username Or Password",
+                        icon: "error",
+                        button: "Close",
+                        timer: 2000
+                    });
+                }
 
-                alert(res.message);
             },
-            error: function (error) {
-                alert(res.message);
+            error: function (res) {
+
             }
         });
 
@@ -74,14 +109,30 @@ login.addEventListener("click",() =>{
             data: "",
             dataType: "",
             success: function (res) {
-
+                if (res.message=="true"){
                 profileLink.href = `../pages/DriverDashboard.html?username=${username}`;
                 document.getElementById("profileLink").click();
 
-                alert(res.message);
+                swal({
+                    title: "Confirmation",
+                    text: "Login  successfully",
+                    icon: "success",
+                    button: "Close",
+                    timer: 2000
+                });
+            }else {
+                    refresh();
+                    swal({
+                             title: "error",
+                             text: "Invalid Username Or Password",
+                             icon: "error",
+                             button: "Close",
+                             timer: 2000
+                         });
+                }
             },
             error: function (error) {
-                alert(res.message);
+
             }
         });
 
@@ -100,52 +151,34 @@ $("#btnSignUp").click(function () {
         contentType: false,
         processData: false,
         success: function (rep) {
-            alert(rep.message);
-
+            refresh2();
+            swal({
+                title: "Confirmation",
+                text: "Login  successfully",
+                icon: "success",
+                button: "Close",
+                timer: 2000
+            });
         },
         error: function (rep) {
-            alert(rep.message);
+            swal({
+                title: "error",
+                text: "Invalid Username Or Password",
+                icon: "error",
+                button: "Close",
+                timer: 2000
+            });
         }
     })
 })
 
+function refresh() {
+    $("#txtLoginusaername,#txtLoginPass").val("");
+}
 
-
-
-//
-// signUp.addEventListener("click",() =>{
-//     let formData = $("#signUpForm").serialize();
-//     $.ajax({
-//         url:baseUrl+"Customer",
-//         method:"post",
-//         data:formData,
-//         dataType: "json",
-//         success:function (res) {
-//             //Invoked if the response status code is in 200 range
-//             console.log("Success Method Invoked");
-//             console.log(res);
-//             alert(res.message);
-//
-//         },
-//         error:function (error) {
-//             //Invokes if status code range is 500 range or 400 range
-//             console.log("Error Method Invoked");
-//             console.log(JSON.parse(error.responseText));
-//             alert(JSON.parse(error.responseText).message);
-//         }
-//     });
-// });
-
-// Function to extract the username from the URL query parameters
-// function getUsernameFromURL() {
-//     const urlParams = new URLSearchParams(window.location.search);
-//     return urlParams.get("username");
-// }
-//
-// // Get the username from the URL or set a default value
-// const username = getUsernameFromURL(); // You can set your default username here.
-
-
+function refresh2() {
+    $(".in").val("");
+}
 
 
 

@@ -20,8 +20,13 @@ public class DriverControllor {
 
     @PostMapping(path ="/{check}")
     public ResponseUtil chekPassword(DriverDTO dto){
-        service.getAdmin(dto);
-        return new ResponseUtil("Ok","true",dto);
+        try {
+            service.getAdmin(dto);
+            return new ResponseUtil("Ok","true",dto);
+        }catch (Exception e){
+            return new ResponseUtil("Ok","False",dto);
+        }
+
     }
 
 

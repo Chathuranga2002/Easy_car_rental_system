@@ -9,6 +9,7 @@
     <title>Sign in & Sign up Form</title>
 
 
+
 </head>
 <body>
 <div class="container">
@@ -30,12 +31,12 @@
 
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input placeholder="Username" type="text" />
+                    <input placeholder="Username" type="text" id="txtLoginusaername" />
                 </div>
 
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input placeholder="Password" type="password" />
+                    <input placeholder="Password" type="password" id="txtLoginPass"/>
                 </div>
 
                 <input class="btn solid" type="button" value="Login" id="loginButton" />
@@ -50,37 +51,37 @@
 
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input placeholder="Nic" type="text" name="nicNo"/>
+                    <input class="in" placeholder="Nic" type="text" name="nicNo"/>
                 </div>
                 <div class="input-field">
                     <i class="fas fa-envelope"></i>
-                    <input placeholder="Name" type="name" name="name"/>
+                    <input class="in"  placeholder="Name" type="name" name="name"/>
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input placeholder="Address" type="address" name="address"/>
+                    <input class="in"  placeholder="Address" type="address" name="address"/>
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input placeholder="Email" type="email" name="email"/>
-                </div>
-
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input placeholder="Contact" type="text" name="contactNo"/>
+                    <input class="in"  placeholder="Email" type="email" name="email"/>
                 </div>
 
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input placeholder="User name" type="text" name="username"/>
+                    <input class="in" placeholder="Contact" type="text" name="contactNo"/>
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input class="in" placeholder="User name" type="text" name="username"/>
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input placeholder="Password" type="password" name="password"/>
+                    <input class="in"  placeholder="Password" type="password" name="password"/>
                 </div>
                 <div class="mb-3  custom1">
                     <label for="formFile" class="form-label custom2">Nic Image</label>
-                    <input class="form-control custom3" type="file" id="formFile" name="nicFrontImg">
+                    <input class="in"  class="form-control custom3" type="file" id="formFile" name="nicFrontImg">
                 </div>
 
                 <input class="btn" type="button" value="Sign up" id="btnSignUp" />
@@ -119,6 +120,7 @@
         </div>
     </div>
 </div>
+<script src="../assets/Sweet Alert/sweetalert.min.js"></script>
 <script src="../assets/js/bootsrap/jquery-3.7.0.min.js"></script>
 <script src="../controller/loginController.js"></script>
 </body>

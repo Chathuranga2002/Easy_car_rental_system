@@ -18,9 +18,13 @@ public class AdminController {
 
     @PostMapping(path = "/{check}")
     public ResponseUtil chekPassword( AdminDTO dto){
-        System.out.println(dto.getUsername());
-        System.out.println(dto.getPassword());
-        service.getAdmin(dto);
-        return new ResponseUtil("Ok","true",dto);
+
+        try{
+            service.getAdmin(dto);
+            return new ResponseUtil("Ok","true",dto);
+        }catch (Exception e){
+            return new ResponseUtil("Ok","False",dto);
+        }
+
     }
 }

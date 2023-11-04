@@ -22,8 +22,12 @@ public class CustomerController {
 
     @PostMapping(path ="/{check}")
     public ResponseUtil chekPassword(CustomerDTO dto){
+        try {
         service.getAdmin(dto);
         return new ResponseUtil("Ok","true",dto);
+        }catch (Exception e){
+            return new ResponseUtil("Ok","False",dto);
+        }
     }
 
     @ResponseStatus(HttpStatus.CREATED)
