@@ -63,7 +63,7 @@
     </div>  <!--Navigation seen over-->
 
 
-    <div class="main">
+    <div class="main" >
 
         <div class="topbar">  <!--Top bar open-->
             <div class="toggle">
@@ -90,7 +90,7 @@
             <br>
             <h3 class="dtTopic1 h3  p-2 m-3 bg-success text-white">My Personal Details</h3>
             <form id="UpdateCusForm">
-                <div class="myProfileDetails row p-3">
+                <div class="myProfileDetails row p-3 sectionClass" >
 
                 <div class="col-3">
                     <div class="mb-3">
@@ -184,7 +184,7 @@
             <div class="bookingRequestDetails row p-3">
                 <div class="col-2">
                     <label for="cmbType" class="form-label mb-0">Car Type</label>
-                    <select class="form-select" aria-label="Default select example" id="cmbType" name="type">
+                    <select class="form-select bookT" aria-label="Default select example" id="cmbType" name="type">
                         <option selected="">- Select Car Type -</option>
                         <option value="General">General</option>
                         <option value="Premium">Premium</option>
@@ -193,95 +193,95 @@
                 </div>
                 <div class="col-2">
                     <label for="cmbRegistrationNo" class="form-label mb-0">Car Registration No</label>
-                    <select class="form-select regNO" aria-label="Default select example"  id="cmbRegistrationNo" name="registrationNo">
-                        <option value="non">Select One</option>
+                    <select class="form-select bookT regNO" aria-label="Default select example"  id="cmbRegistrationNo" name="registrationNo">
+                        <option value="">Select One</option>
                     </select>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtCarBrand" class="form-label mb-0">Brand</label>
-                        <input type="text" class="form-control" id="txtCarBrand" name="carBrand" disabled="">
+                        <input type="text" class="form-control bookT" id="txtCarBrand" name="carBrand" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtCarColor" class="form-label mb-0">Color</label>
-                        <input type="text" class="form-control" id="txtCarColor" name="carColor" disabled="">
+                        <input type="text" class="form-control bookT" id="txtCarColor" name="carColor" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtCarFuel" class="form-label mb-0">Fuel Type</label>
-                        <input type="text" class="form-control" id="txtCarFuel" name="carFuel" disabled="">
+                        <input type="text" class="form-control bookT" id="txtCarFuel" name="carFuel" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtCarTransmission" class="form-label mb-0">Transmission</label>
-                        <input type="text" class="form-control" id="txtCarTransmission" name="carTransmission" disabled="">
+                        <input type="text" class="form-control bookT" id="txtCarTransmission" name="carTransmission" disabled="">
                     </div>
                 </div>
 
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtCarNoOfPassengers" class="form-label mb-0">No Of Passengers</label>
-                        <input type="text" class="form-control" id="txtCarNoOfPassengers" name="carNoOfPassengers" disabled="">
+                        <input type="text" class="form-control bookT" id="txtCarNoOfPassengers" name="carNoOfPassengers" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtCarDailyRate" class="form-label mb-0">Daily Rate (Rs.)</label>
-                        <input type="text" class="form-control" id="txtCarDailyRate" name="carDailyRate" disabled="">
+                        <input type="text" class="form-control bookT" id="txtCarDailyRate" name="carDailyRate" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtCarMonthlyRate" class="form-label mb-0">Monthly Rate (Rs.)</label>
-                        <input type="text" class="form-control" id="txtCarMonthlyRate" name="carMonthlyRate" disabled="">
+                        <input type="text" class="form-control bookT" id="txtCarMonthlyRate" name="carMonthlyRate" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtCarFreeKmForMonth" class="form-label mb-0">Free Km For Month (Km)</label>
-                        <input type="text" class="form-control" id="txtCarFreeKmForMonth" name="carFreeKmForPrice" disabled="">
+                        <input type="text" class="form-control bookT" id="txtCarFreeKmForMonth" name="carFreeKmForPrice" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtCarFreeKmForDay" class="form-label mb-0">Free Km For Day (Km)</label>
-                        <input type="text" class="form-control" id="txtCarFreeKmForDay" name="carFreeKmForDuration" disabled="">
+                        <input type="text" class="form-control bookT" id="txtCarFreeKmForDay" name="carFreeKmForDuration" disabled="">
                     </div>
                 </div>
 
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtCarPriceForExtraKm" class="form-label mb-0">Price For Extra Km (Rs.)</label>
-                        <input type="text" class="form-control" id="txtCarPriceForExtraKm" name="carPriceForExtraKm" disabled="">
+                        <input type="text" class="form-control bookT" id="txtCarPriceForExtraKm" name="carPriceForExtraKm" disabled="">
                     </div>
                 </div>
 
                 <div class="col-2">
                     <label class="form-label mb-0">Car Front View</label>
                     <div class="mb-3" id="divCarFrontView" style="height: 150px; min-width: 150px;overflow: hidden; max-width:250px; border: #00e5ff 2px solid">
-                        <img id="CarFrontView" src="" alt="">
+                        <img id="CarFrontView" class="refresh" src="" alt="">
                     </div>
                 </div>
                 <div class="col-2">
                     <label class="form-label mb-0">Car Back View</label>
                     <div class="mb-3" id="divCarBackView" style="height: 150px; min-width: 150px;overflow: hidden; max-width:250px; border: #00e5ff 2px solid">
-                        <img id="CarBackView" src="" alt="">
+                        <img id="CarBackView" class="refresh" src="" alt="">
                     </div>
                 </div>
                 <div class="col-2">
                     <label class="form-label mb-0">Car Side View</label>
                     <div class="mb-3" id="divCarSideView" style="height: 150px;object-fit: cover;min-width: 150px;overflow: hidden; max-width:250px; border: #00e5ff 2px solid">
-                        <img id="CarSideView" src="" alt="" >
+                        <img id="CarSideView" class="refresh" src="" alt="" >
                     </div>
                 </div>
                 <div class="col-2">
                     <label class="form-label mb-0">Car Interior View</label>
                     <div class="mb-3" id="divCarInteriorView" style="height: 150px;min-width: 150px;object-fit: cover;overflow: hidden; max-width: 250px; border: #00e5ff 2px solid">
-                        <img id="CarInteriorView" src="" alt="" >
+                        <img id="CarInteriorView" class="refresh" src="" alt="" >
                     </div>
                 </div>
 
@@ -295,18 +295,18 @@
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtCarRentId" class="form-label mb-0">Rent ID</label>
-                        <input type="text" class="form-control" id="txtCarRentId" name="carRentId" disabled="">
+                        <input type="text" class="form-control " id="txtCarRentId" name="carRentId" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtCarPickupDate" class="form-label mb-0">Pickup Date</label>
-                        <input type="date" class="form-control" id="txtCarPickupDate" name="carPickupDate">
+                        <input type="date" class="form-control bookT" id="txtCarPickupDate" name="carPickupDate">
                     </div>
                 </div>
                 <div class="col-2">
                     <label for="cmbType" class="form-label mb-0">Rent Type</label>
-                    <select class="form-select" aria-label="Default select example" id="cmbRentType" name="type">
+                    <select class="form-select bookT" aria-label="Default select example" id="cmbRentType" name="type">
                         <option selected="">- Select Rent Type -</option>
                         <option value="1">Month</option>
                         <option value="2">Day</option>
@@ -315,13 +315,13 @@
                 <div class="col-3">
                     <div class="mb-3">
                         <label for="txtPaymentAmount" class="form-label mb-0">Advanced Amount (Rs.)</label>
-                        <input type="text" class="form-control" id="txtPaymentAmount" name="paymentAmount">
+                        <input type="text" class="form-control bookT" id="txtPaymentAmount" name="paymentAmount">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="mb-3">
                         <label for="txtRantDayCount" class="form-label mb-0">How many days/month ? (Rs.)</label>
-                        <input type="text" class="form-control" id="txtRantDayCount" name="txtRantDayCount">
+                        <input type="text" class="form-control bookT" id="txtRantDayCount" name="txtRantDayCount">
                     </div>
                 </div>
                 <div class="col-3">
@@ -348,26 +348,26 @@
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtDriverLicenceNo" class="form-label mb-0">Driver Licence No</label>
-                        <input type="text" class="form-control" id="txtDriverLicenceNo" name="driverLicenceNo" disabled="">
+                        <input type="text" class="form-control bookT" id="txtDriverLicenceNo" name="driverLicenceNo" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtDriverName" class="form-label mb-0">Driver Name</label>
-                        <input type="text" class="form-control" id="txtDriverName" name="driverName" disabled="">
+                        <input type="text" class="form-control bookT" id="txtDriverName" name="driverName" disabled="">
                     </div>
                 </div>
 
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtDriverContactNo" class="form-label mb-0">Driver Contact No</label>
-                        <input type="text" class="form-control" id="txtDriverContactNo" name="driverContactNo" disabled="">
+                        <input type="text" class="form-control bookT" id="txtDriverContactNo" name="driverContactNo" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtDriverNIC" class="form-label mb-0">Driver NIC</label>
-                        <input type="text" class="form-control" id="txtDriverNIC" name="driverNIC" disabled="">
+                        <input type="text" class="form-control bookT" id="txtDriverNIC" name="driverNIC" disabled="">
                     </div>
                 </div>
 
@@ -406,32 +406,32 @@
 
                 <div class="col-2">
                     <label for="CombRentId" class="form-label mb-0">Rent Id</label>
-                    <select class="form-select regNO" aria-label="Default select example"  id="CombRentId" name="rentId">
-                        <option value="non">Select One</option>
+                    <select class="form-select rentview regNO" aria-label="Default select example"  id="CombRentId" name="rentId">
+                        <option value="">Select One</option>
                     </select>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtPickupDate" class="form-label mb-0">Pickup Date</label>
-                        <input type="text" class="form-control" id="txtPickupDate" name="pickUpDate" disabled="">
+                        <input type="text" class="form-control rentview" id="txtPickupDate" name="pickUpDate" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtDayCount" class="form-label mb-0">Rent Type</label>
-                        <input type="text" class="form-control" id="txtType" name="rentType" disabled="">
+                        <input type="text" class="form-control rentview" id="txtType" name="rentType" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtDayCount" class="form-label mb-0">Day Or Month Count</label>
-                        <input type="text" class="form-control" id="txtDayCount" name="dayCount" disabled="">
+                        <input type="text" class="form-control rentview" id="txtDayCount" name="dayCount" disabled="">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="mb-3">
                         <label for="txtStatus" class="form-label mb-0">status</label>
-                        <input type="text" class="form-control" id="txtStatus" name="status" disabled="">
+                        <input type="text" class="form-control rentview" id="txtStatus" name="status" disabled="">
                     </div>
                 </div>
             </div>

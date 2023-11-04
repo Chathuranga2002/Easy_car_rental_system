@@ -1,8 +1,5 @@
 package lk.ijse.Easy_car_rental.service.impl;
 
-import lk.ijse.Easy_car_rental.dto.CarDTO;
-import lk.ijse.Easy_car_rental.dto.CarRentDTO;
-import lk.ijse.Easy_car_rental.entity.Car;
 import lk.ijse.Easy_car_rental.entity.CarRent;
 import lk.ijse.Easy_car_rental.repo.CarRentRepo;
 import lk.ijse.Easy_car_rental.repo.CarRepo;
@@ -13,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Transactional
@@ -68,7 +67,42 @@ public class CarRentServiceImpl implements CarRentService {
 
     }
 
+    @Override
+    public ArrayList<CarRent> getCarRentsByDrivingLicenceNo(String status, String licenceNo) {
 
+        List<CarRent> all = repo.getAllByDrivingLicenceNo(status, licenceNo);
+        return  new ArrayList<>(all);
+    }
 
+    @Override
+    public ArrayList<CarRent> getCarRentsByCustomerId(String customerId) {
+        List<CarRent> all = repo.getAllByCustomerId(customerId);
+        return  new ArrayList<>(all);
+    }
 
+    @Override
+    public CarRent searchCarRent(String rentId) {
+        if (repo.existsById(rentId)) {
+            return mapper.map(repo.findById(rentId).get(), CarRent.class);
+        } else {
+            throw new RuntimeException("Car Rent Not Found...");
+        }
+    }
+    @Override
+    public void deleteCarRent(String rentId) {
+        if (repo.existsById(rentId)) {
+            repo.deleteById(rentId);
+        } else {
+            throw new RuntimeException("No Such CarRents To Delete");
+        }
+    }
+
+    @Override
+    public void updateCarRentStatus(String rentId, String status) {
+        if (repo.existsById(rentId)) {
+            repo.updateCarRentStatus(rentId, status);
+        } else {
+            throw new RuntimeException("No Such CarRent To Update");
+        }
+    }
 }

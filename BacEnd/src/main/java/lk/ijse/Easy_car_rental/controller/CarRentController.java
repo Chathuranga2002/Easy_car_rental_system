@@ -43,4 +43,31 @@ public class CarRentController {
 
     }
 
+    @GetMapping(path = "/getCarRents/{status}/{licenceNo}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllCarRentsByDrivingLicence(@PathVariable String status, @PathVariable String licenceNo) {
+        System.out.println(status+""+licenceNo);
+        return new ResponseUtil("200", "Ok", service.getCarRentsByDrivingLicenceNo(status, licenceNo));
+    }
+
+    @GetMapping(path = "/getMyCarRents/{customerId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getMyCarRents(@PathVariable String customerId) {
+        return new ResponseUtil("200", "Ok", service.getCarRentsByCustomerId(customerId));
+    }
+
+    @GetMapping(path = "/{rentId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil searchCarRent(@PathVariable String rentId) {
+        return new ResponseUtil("200", "Ok", service.searchCarRent(rentId));
+    }
+
+    @DeleteMapping(path = {"/{rentId}"}, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil deleteCarRent(@PathVariable String rentId) {
+        service.deleteCarRent(rentId);
+        return new ResponseUtil("200", "Deleted", null);
+    }
+
+    @PutMapping(path = "/{rentId}/{status}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil updateCarRentStatus(@PathVariable String rentId, @PathVariable String status) {
+        service.updateCarRentStatus(rentId, status);
+        return new ResponseUtil("200", "Ok", null);
+    }
 }

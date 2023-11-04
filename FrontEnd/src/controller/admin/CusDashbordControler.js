@@ -1,5 +1,5 @@
 
-
+searchCustomerByIdForRespond();
 //update customer
 $("#btnUpdateCustomer").click(function () {
 
@@ -158,7 +158,9 @@ function addCarRent(customer, car, driver) {
         dataType: "json",
         contentType: "application/json",
         success: function (rep) {
-
+            searchCustomerByIdForRespond();
+            refreshAddRent();
+            generateNextCarRentId();
             swal({
                 title: "Confirmation",
                 text: "Rental Request send successfully",
@@ -180,4 +182,101 @@ function addCarRent(customer, car, driver) {
         }
     })
 }
+//-=============================================================================================
 
+function searchCustomerByIdForRespond() {
+        $.ajax({
+            url: baseUrl + "Customer/" + username,
+            method: "GET",
+            success: function (res) {
+                let customer = res.data;
+
+                loadMyRentId(customer.nicNo);
+
+            }
+        });
+
+}
+
+
+function loadMyRentId(nicNo) {
+        $.ajax({
+            url:"http://localhost:8080/BacEnd_war/CarRent/getMyCarRents/"+nicNo,
+            method:"GET",
+            success:function (res) {
+                for (let carRent of res.data) {
+                    let rent=carRent.rentId;
+                    $("#CombRentId").append(`<option value="${rent}">${rent}</option>`);
+                }
+            }
+        })
+}
+
+$("#CombRentId").change(function () {
+    let code = $("#CombRentId").val();
+    $.ajax({
+        url:"http://localhost:8080/BacEnd_war/CarRent/"+code,
+        method:"GET",
+        success:function (res) {
+            let rent=res.data;
+          $("#txtPickupDate").val(rent.pickUpDate);
+          $("#txtType").val(rent.rentType);
+          $("#txtDayCount").val(rent.dayCount);
+          $("#txtStatus").val(rent.status);
+        }
+    })
+
+});
+
+$('#btnClearRental').click(function () {
+    refreshRentView();
+});
+
+
+
+
+
+
+function refreshRentView() {
+    $(".rentview").val("");
+}
+//===================delete rent
+$('#btnDeleteRental').click(function () {
+    cancealedRental($("#CombRentId").val());
+});
+$('#btnCancleRental').click(function () {
+    refreshAddRent();
+});
+
+
+function cancealedRental(rentId) {
+    let status = "Canceled";
+    $.ajax({
+        url:  "http://localhost:8080/BacEnd_war/CarRent/" + rentId + "/" + status,
+        method: "PUT",
+        success: function (res) {
+            refreshRentView();
+            swal({
+                title: "Confirmation!",
+                text: "Car Rental Accepted Successfully",
+                icon: "success",
+                button: "Close",
+                timer: 2000
+            });
+        },
+        error: function (ob) {
+            swal({
+                title: "Error!",
+                text: "Car Rental Not Accepted",
+                icon: "error",
+                button: "Close",
+                timer: 2000
+            });
+        }
+    })
+}
+
+function refreshAddRent() {
+    $(".bookT").val("");
+    $(".refresh").attr("src","");
+}

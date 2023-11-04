@@ -1,12 +1,15 @@
 package lk.ijse.Easy_car_rental.service;
 
-import lk.ijse.Easy_car_rental.dto.CarDTO;
-import lk.ijse.Easy_car_rental.dto.CarRentDTO;
 import lk.ijse.Easy_car_rental.entity.CarRent;
-import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.ArrayList;
 
 public interface CarRentService  {
     String generateRentId();
     void saveCarRent(CarRent dto);
-
+    ArrayList<CarRent> getCarRentsByDrivingLicenceNo(String status, String licenceNo);
+    ArrayList<CarRent> getCarRentsByCustomerId(String customerId);
+    CarRent searchCarRent(String rentId);
+    void deleteCarRent(String rentId);
+    void updateCarRentStatus(String rentId, String status);
 }
