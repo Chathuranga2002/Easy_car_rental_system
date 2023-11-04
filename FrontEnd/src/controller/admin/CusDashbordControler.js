@@ -266,9 +266,9 @@ function cancealedRental(rentId) {
         },
         error: function (ob) {
             swal({
-                title: "Error!",
-                text: "Car Rental Not Accepted",
-                icon: "error",
+                title: "Confirmation!",
+                text: "Car Rental Accepted Successfully",
+                icon: "success",
                 button: "Close",
                 timer: 2000
             });
